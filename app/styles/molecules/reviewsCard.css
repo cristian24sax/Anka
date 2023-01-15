@@ -1,0 +1,79 @@
+.hr-card {
+  @apply py-[4rem] px-[2.2rem] h-[98%] w-[87%] ml-[2.35rem] flex flex-col;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  @screen laptop {
+    padding: 0 calc(3.6rem * var(--scale));
+    padding-top: calc(4.6rem * var(--scale));
+    padding-bottom: calc(3.8rem * var(--scale));
+    margin-left: 4rem;
+    /* width: 100%; */
+    height: 97.5%;
+  }
+  &__content {
+    @apply mb-[5rem] font-light text-content leading-[2.9rem];
+    @screen laptop {
+      font-size: calc(1.9rem * var(--scale));
+      line-height: calc(3.7rem * var(--scale));
+    }
+  }
+  &__avatar {
+    @apply p-[.6rem] rounded-full;
+    border: 1px solid #f59e12;
+    width: 7.3rem;
+    height: 7.3rem;
+    @screen laptop {
+      border: 0.900544px solid #606060;
+    }
+  }
+
+  &__info {
+    @apply flex  flex-col;
+    margin-top: auto;
+    &__user {
+      @apply flex gap-[1.6rem];
+    }
+    &__about {
+      @apply flex justify-center flex-col;
+      @screen laptop {
+        gap: calc(0.3rem * var(--scale));
+      }
+    }
+    &__name {
+      @apply font-roboto font-medium text-content text-[1.4rem] leading-[1.4rem];
+      @screen laptop {
+        font-size: calc(1.6rem * var(--scale));
+        line-height: calc(1.6rem * var(--scale));
+      }
+    }
+    &__date {
+      @apply font-roboto font-normal text-[1.3rem] leading-[1.7rem] text-content;
+      @screen laptop {
+        font-size: calc(1.35rem * var(--scale));
+        line-height: calc(1.7rem * var(--scale));
+      }
+    }
+    &__starts {
+      @apply flex gap-[1rem] items-center text-white mt-[1.8rem];
+      @screen laptop {
+        margin-top: calc(3.8rem * var(--scale));
+      }
+      .icon-star {
+        @apply bg-primary rounded-full flex items-center justify-center;
+        width: 3.1rem;
+        height: 3.1rem;
+        @screen laptop {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+      }
+    }
+    &__starts {
+      .icon-star {
+        &:last-child {
+          @apply bg-[#ADADAD] text-white;
+        }
+      }
+    }
+  }
+}

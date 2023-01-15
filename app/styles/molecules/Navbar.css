@@ -1,0 +1,314 @@
+.Navbar {
+  @apply bg-[#ffffff] fixed top-0 right-0 left-0;
+  padding-top: 1.3rem;
+  padding-bottom: 5.2rem;
+  width:50%;
+  height:100vh;
+  border-radius: 0 0 1.5em 0rem;
+  transform: translateX(-110%);
+  transition: transform 0.3s ease;
+  @media screen(laptop) {
+    @apply static inset-auto p-0 transform-none rounded-none h-full w-full bg-transparent;
+  }
+  &-ul {
+    margin-top: 4.6rem;
+    font-size: 1.8rem;
+
+    @apply font-normal flex flex-col justify-center items-center gap-[2rem];
+    a{
+      text-shadow: 0px 2px 4px #5f6280;
+      @screen laptop{
+        @apply text-white;
+        text-shadow:none;
+      }
+    }
+
+    @media screen(laptop) {
+      @apply relative flex flex-row m-0 font-medium mx-auto font-poppins h-full items-center justify-start right-[5rem];
+      font-size: calc(1.9rem * var(--scale));
+      border-top: none;
+      gap: calc(4.5rem * var(--scale));
+    }
+  }
+
+  &-logo{
+    @screen laptop{
+      @apply hidden;
+    }
+  }
+&.isActive {
+  @apply pt-0;
+  transform: translateX(0%);
+}
+  /* 
+
+
+  &-logo {
+    @media screen(laptop) {
+      @apply hidden;
+    }
+  }
+  &-container {
+    margin-right: 6.3rem;
+    @apply flex justify-between ml-12;
+    .socials {
+      font-size: 2rem;
+      margin-top: 0.9rem;
+      @apply flex text-secondary gap-4;
+
+      @screen laptop {
+        @apply hidden;
+      }
+    }
+  }
+
+  &-ul {
+    margin-top: 7.6rem;
+    font-size: 1.8rem;
+
+    @apply font-normal flex flex-col;
+
+    @media screen(laptop) {
+      @apply relative flex flex-row m-0 font-medium mx-auto font-poppins h-full items-center justify-start;
+      font-size: calc(1.9rem * var(--scale));
+      border-top: none;
+      gap: calc(5.5rem * var(--scale));
+    }
+    &-ctn {
+      @media screen(laptop) {
+        &:hover .Navbar-a-list {
+          &::after {
+            @apply pointer-events-auto;
+          }
+          display: flex;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &-a {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0;
+    transition: color 0.5s ease;
+    @apply px-12  relative cursor-pointer flex justify-between  text-white;
+    &::after {
+      @apply absolute bg-primary;
+      content: '';
+      bottom: calc(-1rem * var(--scale));
+      opacity: 0;
+      left: calc(-2.5rem * var(--scale));
+      top: calc(1.2rem * var(--scale));
+      height: 3.5px;
+      width: calc(2rem * var(--scale));
+      transition: opacity 0.5s ease;
+      border-radius: 1rem;
+    }
+    &.isActive {
+      @apply font-bold;
+    }
+    @media screen(laptop) {
+      @apply text-white;
+      &:hover,
+      &.isActive {
+        @apply font-medium;
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+    &:nth-child(3) {
+      @apply font-normal;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      @media screen(laptop) {
+        border-bottom: none;
+        &::after {
+          opacity: 0;
+        }
+        @apply hidden;
+      }
+    }
+    &.isActive {
+      &:nth-child(3) {
+        @apply font-normal;
+        @media screen(laptop) {
+          &::after {
+            opacity: 0;
+          }
+          @apply hidden;
+        }
+      }
+    }
+    &.homeActive {
+      &:nth-child(3) {
+        @apply font-bold;
+      }
+    }
+    @media screen(laptop) {
+      @apply text-white;
+    }
+
+    .icon-arrow-bottom {
+      @apply text-[1.5rem];
+      transition: transform 0.5s ease;
+      @media screen(laptop) {
+        @apply hidden;
+      }
+    }
+    &-controller {
+      @media screen(laptop) {
+        @apply pointer-events-none;
+      }
+    }
+
+    &.Services {
+      @apply flex flex-col relative;
+      @media screen(laptop) {
+        @apply overflow-visible;
+        &::after {
+          @apply absolute  w-full bg-primary;
+          bottom: calc(-3rem * var(--scale));
+          left: 0;
+          right: 0;
+          height: calc(1rem * var(--scale));
+          content: '';
+          opacity: 0;
+          z-index: 10;
+        }
+      }
+    }
+    .showServices {
+      .icon-arrow-select {
+        transform: rotate(180deg);
+      }
+    }
+    &-header {
+      @apply flex relative justify-between items-center w-full;
+      transition: height 0.5s ease;
+    }
+
+    &-list {
+      @apply flex flex-col  text-[#FFFBFB] font-light overflow-hidden;
+      list-style: disc;
+      padding: revert;
+      padding-left: 6rem;
+      max-height: 0;
+      transition: all 0.5s ease-out;
+
+      @media screen(laptop) {
+        @apply absolute  text-content flex justify-center overflow-visible font-light bg-[#434343]/40 py-0 pr-0;
+        width: calc(28.4rem * var(--scale));
+        min-height: calc(18.9rem * var(--scale));
+        height: 100%;
+        left: calc(7rem * var(--scale));
+        bottom: calc(-17rem * var(--scale));
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        font-size: calc(1.7rem * var(--scale));
+        line-height: calc(3.4rem * var(--scale));
+        letter-spacing: 0.05em;
+        background:#ffffff;
+        border-radius: 5px 5px 5px 5px;
+
+        padding-left: calc(6rem * var(--scale));
+        &.headerWhite {
+          @apply bg-white text-content;
+        }
+        &:hover,
+        &.isActive {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+      &.isActive {
+        max-height: 50rem;
+        .Navbar-a-item {
+          &::after {
+          }
+        }
+        @media screen(laptop) {
+          visibility: visible;
+          .Navbar-li-item {
+            border: none;
+          }
+        }
+      }
+      &::after {
+        @apply relative bg-primary;
+        content: '';
+        bottom: calc(-1rem * var(--scale));
+        opacity: 0;
+        left: calc(-4.4rem * var(--scale));
+        top: calc(-21.8rem * var(--scale));
+        height: 4px;
+        width: calc(2.05rem * var(--scale));
+        transition: opacity 0.5s ease;
+        border-radius: 1rem;
+      }
+
+      @screen desktop {
+        &::after {
+          top: calc(-19.7rem * var(--scale));
+        }
+      }
+    }
+
+    &-item {
+      border-top: 1px solid transparent;
+      transition: border-top 0.5s linear;
+      padding: 0.2rem 0;
+      @apply pl-[.5rem] relative cursor-pointer  justify-between;
+      a {
+        @apply block;
+      }
+      &::after {
+        @apply absolute;
+        background: rgba(255, 255, 255, 0.2);
+        top: 0;
+        left: -20rem;
+        right: -5rem;
+        width: 500%;
+        height: 1px;
+        content: '';
+        @media screen(laptop) {
+          @apply hidden;
+        }
+      }
+      @media screen(laptop) {
+        @apply pl-0 w-full;
+        border: none;
+      }
+    }
+    &-contact {
+      @apply hidden;
+      @media screen(laptop) {
+        @apply inline-block absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    @media screen(laptop) {
+      transition: color 0.3s ease;
+      @apply border-none p-0 relative;
+
+      &:hover,
+      &.isActive {
+        i &::after {
+          opacity: 1;
+        }
+      }
+      &.colorContent {
+        @apply text-content;
+      }
+    }
+  }
+  .isActivebtn {
+    @apply font-bold;
+    .icon-arrow-right,.btn__text {
+      transform: translateX(0);
+    }
+  } */
+}

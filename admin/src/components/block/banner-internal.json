@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_block_banner_internals",
+  "info": {
+    "displayName": "banner_internal"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "img_marcas": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

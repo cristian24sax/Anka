@@ -1,0 +1,27 @@
+.HomeAbout {
+  @apply py-[2.5rem];
+
+  &-ctn {
+    @apply flex flex-col gap-[2rem];
+  }
+  &-tabs{
+   @apply hidden;
+  }
+  @screen laptop {
+    padding: calc(5.5rem * var(--scale)) 0;
+    &-ctn {
+      @apply flex flex-row;
+      margin-top: calc(2.5rem * var(--scale));
+      gap: calc(4rem * var(--scale));
+    }
+    &-tabs {
+      @apply w-[50%] block;
+    }
+    &-Accordion{
+      @apply hidden;
+    }
+    &-picture {
+      @apply w-[50%];
+    }
+  }
+}

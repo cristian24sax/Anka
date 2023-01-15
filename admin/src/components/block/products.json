@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_block_products",
+  "info": {
+    "displayName": "products",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "list_products": {
+      "type": "richtext"
+    }
+  }
+}

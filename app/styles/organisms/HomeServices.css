@@ -1,0 +1,39 @@
+.HomeService {
+  @apply py-[2rem];
+
+  &-ctn {
+    @apply flex flex-col gap-[3rem];
+  }
+  &-picture {
+    @apply flex justify-center;
+    img {
+      border-radius: 10px;
+    }
+  }
+  &-content {
+    @apply flex flex-col gap-[3rem];
+
+    &__info {
+      @apply font-roboto not-italic;
+    }
+  }
+
+  /* laptop */
+  @screen laptop {
+    &-ctn {
+      @apply flex-row gap-0;
+      margin-top:calc(4rem*var(--scale));
+      
+    }
+    &-picture {
+      @apply block w-[90%];
+    }
+    &-content {
+      @apply items-start;
+      gap:calc(5rem*var(--scale));
+      margin-top: calc(4rem * var(--scale));
+      width: 80%;
+    }
+    
+  }
+}

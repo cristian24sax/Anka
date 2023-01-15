@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "multilanguaes",
+  "info": {
+    "singularName": "multilanguae",
+    "pluralName": "multilanguaes",
+    "displayName": "multilanguage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lbl_contact_us": {
+      "type": "string"
+    },
+    "lbl_see_more": {
+      "type": "string"
+    },
+    "lbl_see_service": {
+      "type": "string"
+    },
+    "menu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.menu"
+    }
+  }
+}

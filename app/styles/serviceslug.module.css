@@ -1,0 +1,121 @@
+.ServicesDetails {
+  @apply mt-0;
+  opacity: 0;
+  transition: opacity 2.2s ease;
+  &__show {
+    animation: fadeIn 2.4s ease;
+    opacity: 1;
+  }
+
+  &.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  &__ctn {
+    @apply pt-[5rem];
+    @media screen(laptop) {
+      padding-top: calc(5rem * var(--scale));
+    }
+  }
+  &__content {
+    @apply relative top-[5rem];
+    @screen laptop {
+      @apply top-0;
+    }
+  }
+  &__btn {
+    @apply block;
+    @screen laptop {
+      @apply hidden;
+    }
+  }
+  &__info {
+    @media screen(laptop) {
+      @apply flex justify-between items-center;
+      gap: calc(22rem * var(--scale));
+    }
+    &__text {
+      @apply absolute;
+      top: 6rem;
+      left: 0;
+      right: 0;
+      @media screen(laptop) {
+        top: calc(7rem * var(--scale));
+      }
+      h2 {
+        @apply font-poppins font-semibold text-[2.5rem] leading-[4.3rem] text-white;
+        @media screen(laptop) {
+          margin-top: calc(2rem * var(--scale));
+          font-size: calc(5.5rem * var(--scale));
+          line-height: calc(9.4rem * var(--scale));
+        }
+      }
+      p {
+        @apply font-roboto font-light text-[1.5rem] text-white leading-[2.6rem];
+        @media screen(laptop) {
+          max-width: 78ch;
+          font-size: calc(1.9rem * var(--scale));
+          line-height: calc(3.2rem * var(--scale));
+        }
+      }
+    }
+    &__btns {
+      @apply flex gap-[1.7rem] mt-[3.5rem];
+      @media screen(laptop) {
+        gap: calc(3.8rem * var(--scale));
+      }
+    }
+  }
+  &__header {
+    @apply relative;
+    @media screen(laptop) {
+      /* transform: translateY(-30rem); */
+    }
+  }
+  &__picture {
+    @apply relative isolate;
+    &::after {
+      @apply absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 45.6rem;
+      max-height: 45.6rem;
+      /* background: rgba(0, 0, 0, 0); */
+      @media screen(laptop) {
+        height: calc(55rem * var(--scale));
+        max-height: calc(55rem * var(--scale));
+      }
+    }
+  }
+  &__image {
+    height: 45.6rem;
+    @media screen(laptop) {
+      height: calc(55rem * var(--scale));
+    }
+  }
+}

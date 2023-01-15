@@ -1,0 +1,54 @@
+.InfoHeader {
+   @apply hidden;
+   @media screen(laptop) {
+      @apply block relative bg-black;
+      /* z-index: 10; */
+      &::after {
+         content: '';
+         @apply absolute bg-white/60;
+         left: 0;
+         bottom: 0;
+         right: 0;
+         height: 1px;
+      }
+   }
+
+   &-container {
+      width: 78.2%;
+      max-width: 147.6rem;
+      height: calc(4.6rem * var(--scale));
+      gap: calc(5rem * var(--scale));
+      @apply flex justify-end mx-auto items-center;
+   }
+
+   &-container > .socials {
+      font-size: calc(1.9rem * var(--scale));
+      gap: calc(1.5rem * var(--scale));
+      @apply flex text-white items-center;
+   }
+
+   &-ul {
+      @apply flex items-center text-white font-light font-roboto;
+      gap: calc(7.2rem * var(--scale));
+   }
+
+   &-li {
+      @apply flex items-center relative;
+   }
+
+   &-li::after {
+      @apply bg-white block absolute;
+      content: '';
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      right: calc(-2.5rem * var(--scale));
+      height: calc(2.2rem * var(--scale));
+   }
+
+   &-a {
+      gap: calc(1.2rem * var(--scale));
+      font-size:calc(1.55rem*var(--scale));
+      @apply flex items-center font-normal;
+   }
+}

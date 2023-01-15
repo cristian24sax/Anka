@@ -1,0 +1,24 @@
+.Tab {
+  @apply flex flex-row w-full;
+  &-container {
+    @apply w-[25%] flex flex-col  cursor-pointer;
+  }
+  &-header {
+    @apply px-[2rem] py-[1.4rem] flex justify-center items-center;
+    background: rgba(0, 0, 0, 0.08);
+    border: 0.2px solid rgba(0, 0, 0, 0.08);
+    transition : ease-out 50ms;
+  }
+  &-header.active {
+    @apply text-primary bg-white ;
+    border-right: 1px solid white ;
+  }
+  &-content {
+    @apply w-[75%] px-[2rem] py-[2rem];
+    border: 1.5px solid rgba(0, 0, 0, 0.08);
+    /* border-left:0 */
+    h2{
+        margin-bottom:calc(2rem*var(--scale));
+    }
+  }
+}

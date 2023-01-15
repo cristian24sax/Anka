@@ -1,0 +1,49 @@
+.BannerInternal {
+   @apply bg-primary py-[4.8rem];
+   @screen laptop {
+      padding: calc(4.7rem * var(--scale)) 0;
+   }
+   &-ctn {
+      @screen laptop {
+         @apply flex items-center justify-center;
+         gap: calc(19.8rem * var(--scale));
+      }
+   }
+   &-h3 {
+      @apply font-poppins font-semibold text-[2.5rem] leading-[3.3rem] text-center text-white mb-[2.8rem];
+      @screen laptop {
+         @apply mb-0;
+         font-size: calc(2.5rem * var(--scale));
+         line-height: calc(2.5rem * var(--scale));
+      }
+   }
+   &-btn {
+      @apply bg-primary relative inline-block font-medium text-[1.3rem] uppercase leading-[1.5rem] text-white py-[1rem] px-[2.7rem];
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 0;
+      border-top: 1.6px solid #ffffff;
+      border-bottom: 1.6px solid #ffffff;
+      transition: all 0.5s ease;
+
+      @screen laptop {
+         left: 0;
+         transform: translateX(0);
+         font-size: calc(1.5rem * var(--scale));
+         line-height: calc(1.6rem * var(--scale));
+         border-top: 2px solid rgba(255, 255, 255, 0.35);
+         border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+         padding: 1rem calc(2.7rem * var(--scale));
+      }
+      @media (hover: hover) {
+         &:hover {
+            border-top: 1.6px solid white;
+            border-bottom: 1.6px solid white;
+            @screen laptop {
+               border-top: 2px solid white;
+               border-bottom: 2px solid white;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,172 @@
+/* .btn {
+  @apply py-[1.3rem] px-[1.7rem] inline-block font-poppins font-semibold text-[1.47rem] leading-[2.3rem] cursor-pointer isolate overflow-hidden relative;
+  letter-spacing: 0.05em;
+  border-radius: 0.5rem;
+  @media screen(laptop) {
+    font-size: calc(1.6rem * var(--scale));
+    line-height: calc(2.8rem * var(--scale));
+    padding: calc(1rem * var(--scale)) calc(3.7rem * var(--scale));
+  }
+  &::after {
+    @apply inset-0 absolute;
+    content: '';
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  @media (hover: hover) {
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &.primary {
+    @apply text-white  bg-primary py-[1rem] px-[2rem];
+    @screen laptop{
+      padding: calc(1.2rem*var(--scale)) calc(3.8rem*var(--scale));
+      padding-left:calc(3.2rem*var(--scale));
+    }
+    &::after {
+    }
+    .icon-arrow-right {
+      @apply hidden;
+      @screen laptop {
+        transition: all 0.4s ease-in;
+        margin-left: 0.5rem;
+        margin-bottom: 0.7rem;
+        @apply inline-block ;
+        &:before {
+          font-size: calc(1.7rem * var(--scale));
+          margin-left: calc(-7.1rem * var(--scale));
+        }
+      }
+    }
+    @media (hover: hover) {
+      &:hover {
+        font-size: calc(1.75rem * var(--scale));
+        transition: 0.2s;
+        .icon-arrow-right {
+          transform: translateX(calc(4.6rem * var(--scale)));
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.service {
+    @apply font-poppins font-medium p-0 flex items-center text-white uppercase text-[1.5rem] leading-[1.3rem] ;
+    @screen laptop {
+      gap:.5rem;
+      font-size: calc(2rem * var(--scale));
+      line-height: calc(1.6rem * var(--scale));
+    }
+    .icon-arrow-right {
+      @apply mr-[.5rem] text-[1rem];
+      @screen laptop {
+        font-size: calc(1.7rem * var(--scale));
+      }
+    }
+  }
+}
+
+ */
+
+.btn {
+  /* @apply overflow-hidden font-poppins; */
+  @apply  inline-block font-poppins font-semibold;
+
+  border-radius: 5px;
+
+  &.primary {
+    @apply bg-primary text-white font-semibold text-[1.4rem] leading-[1rem] py-[1.5rem] px-[1.9rem];
+    letter-spacing: 0.03em;
+    @screen laptop {
+      @apply inline-block;
+      padding: calc(1.8rem * var(--scale)) calc(2.2rem * var(--scale));
+      font-size: calc(1.7rem * var(--scale));
+      line-height: calc(1.2rem * var(--scale));
+    }
+    .btn__ctn,
+    .icon-arrow-right,
+    .btn__text {
+      transition: transform 0.5s ease;
+    }
+    .btn__ctn {
+      @apply flex items-center justify-center w-full h-full overflow-hidden pb-[.15rem];
+      gap: 1rem;
+      @screen laptop {
+        transform: translateX(4%);
+      }
+    }
+    .icon-arrow-right {
+      @apply hidden;
+      @screen laptop {
+        @apply inline-block;
+        transform: translateX(-100%);
+      }
+    }
+    .btn__text {
+      @screen laptop {
+        transform: translateX(-19%);
+      }
+    }
+    @media (hover: hover) {
+      &:hover {
+        .btn__ctn,
+        .icon-arrow-right,
+        .btn__text {
+          transform: translateX(0);
+        }
+      }
+    }
+    &.active {
+      .btn__ctn,
+      .icon-arrow-right,
+      .btn__text {
+        transform: translateX(0);
+      }
+    }
+  }
+  &.secondary {
+    @apply bg-primary font-medium text-[1.3rem] uppercase leading-[1.5rem] text-white py-[1rem];
+    border-radius: 0;
+    border-top: 1.6px solid rgba(255, 255, 255, 0.35);
+    border-bottom: 1.6px solid rgba(255, 255, 255, 0.35);
+    transition: all 0.5s ease;
+
+    @screen laptop {
+      font-size: calc(1.5rem * var(--scale));
+      line-height: calc(1.6rem * var(--scale));
+      border-top: 2px solid rgba(255, 255, 255, 0.35);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+    }
+    @media (hover: hover) {
+      &:hover {
+        border-top: 1.6px solid white;
+        border-bottom: 1.6px solid white;
+        @screen laptop {
+          border-top: 2px solid white;
+          border-bottom: 2px solid white;
+        }
+      }
+    }
+  }
+
+    &.service {
+    @apply font-poppins font-medium p-0 flex items-center text-white uppercase text-[1.5rem] leading-[1.3rem] ;
+    @screen laptop {
+      gap:.5rem;
+      font-size: calc(2rem * var(--scale));
+      line-height: calc(1.6rem * var(--scale));
+    }
+    .icon-arrow-right {
+      @apply mr-[.5rem] text-[1rem];
+      @screen laptop {
+        font-size: calc(1.7rem * var(--scale));
+      }
+    }
+  }
+}

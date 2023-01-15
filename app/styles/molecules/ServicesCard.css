@@ -1,0 +1,115 @@
+.ServicesCard {
+  @apply relative mx-auto block isolate;
+  z-index: 2;
+  max-width: 33.4rem;
+  height: 38.4rem;
+  @media screen(laptop) {
+    max-width: 35.4rem;
+    height: auto;
+    &:hover {
+      .ServicesCard {
+        &-info {
+          &__content {
+            transform: translateY(21%);
+            opacity: 1;
+          }
+          &__arrow {
+            transform: scale(0);
+            opacity: 0;
+          }
+        }
+        &-image {
+          img {
+            transform: scale(1.15);
+          }
+          &::after {
+            background: rgba(0, 0, 0, 0.45);
+          }
+        }
+      }
+    }
+  }
+  &-image {
+    @apply relative;
+    mix-blend-mode: multiply;
+    @media screen(laptop) {
+      /* height: calc(48.2rem * var(--scale)); */
+    }
+    &::after {
+      @apply absolute inset-0;
+      content: '';
+      background: rgba(0, 0, 0, 0.4);
+      transition: background 0.5s ease;
+      @media screen(laptop) {
+        background: linear-gradient(
+          360deg,
+          rgba(0, 0, 0, 0.45) 16.35%,
+          rgba(0, 0, 0, 0) 73.99%
+        );
+        transform: rotate(-180deg);
+      }
+    }
+    img {
+      transition: transform 1.5s ease;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+  &-info {
+    @apply absolute flex flex-col;
+    left: 2.6rem;
+    right: 7.5rem;
+    top: 4.2rem;
+    bottom: 4rem;
+    @media screen(tablet) {
+      width: calc(19rem * var(--scale));
+      height: calc(31rem * var(--scale));
+    }
+    @media screen(laptop) {
+      left: calc(3.6rem * var(--scale));
+      top: calc(5.4rem * var(--scale));
+      width: calc(24rem * var(--scale));
+      height: auto;
+    }
+    h3 {
+      @apply font-poppins font-medium text-[2.1rem] w-[90%] leading-[2.3rem] text-[#ffffff];
+      @media screen(laptop) {
+        @apply w-full;
+        font-size: calc(2.5rem * var(--scale));
+        line-height: calc(3.8rem * var(--scale));
+      }
+    }
+    &__content {
+      margin-top: auto;
+      @media screen(laptop) {
+        opacity: 0;
+        transform: translateY(50%);
+        transition: transform 1s ease, opacity 1.5s ease;
+      }
+      p {
+        @apply font-roboto text-[1.5rem] font-light leading-[2.6rem] text-white mb-[1rem];
+        /* @screen tablet{
+          width:calc(19rem*var(--scale));
+        } */
+        @media screen(laptop) {
+          margin-bottom: calc(1.7rem * var(--scale));
+          font-size: calc(1.9rem * var(--scale));
+          line-height: calc(3.2rem * var(--scale));
+          /* width: 100%; */
+        }
+      }
+    }
+    &__arrow {
+      @apply hidden;
+      @media screen(laptop) {
+        @apply bg-white text-[#58595B] flex font-semibold items-center justify-center relative rounded-full;
+        font-size: calc(1.3rem * var(--scale));
+        bottom: 0;
+        left: 0;
+        width: calc(4.1rem * var(--scale));
+        height: calc(4.1rem * var(--scale));
+        transition: transform 1s ease, opacity 0.7s ease;
+      }
+    }
+  }
+}

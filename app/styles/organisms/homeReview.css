@@ -1,0 +1,89 @@
+
+.home-reviews {
+   @apply pt-[7rem] pb-[3.5rem];
+   @screen laptop {
+      padding: calc(11.5rem * var(--scale)) 0;
+   }
+   &__ctn {
+      @apply px-[1.7rem] w-full max-w-full font-roboto;
+      @screen tabletxl {
+         @apply p-0 w-[85%] mx-auto;
+      }
+      @screen desktop {
+         @apply w-[86.6%];
+      }
+   }
+   &__swiper {
+      @apply relative mt-[1rem];
+   }
+   &__content{
+      @apply text-center mb-[4rem];
+      @screen laptop{
+         @apply  w-[27%] mx-auto;
+         margin-bottom: calc(5rem*var(--scale));
+      }
+   }
+   &__navigation {
+      @apply bg-primary rounded-full text-[1.3rem] cursor-pointer text-white absolute flex items-center justify-center;
+      width: 4.3rem;
+      height: 4.3rem;
+      top: 50%;
+      z-index: 3;
+      transform: translateY(-50%);
+      @screen laptop {
+         @apply bg-white text-content;
+         font-size: calc(1.8rem * var(--scale));
+         box-shadow: 0px 3.32471px 3.32471px rgba(0, 0, 0, 0.15);
+         width: calc(7.3rem * var(--scale));
+         height: calc(7.3rem * var(--scale));
+         transition: background 0.5s ease;
+         &:hover {
+            @apply bg-primary text-white;
+         }
+      }
+      &__prev {
+         box-shadow: 0px -3.32471px 3.32471px rgba(0, 0, 0, 0.15);
+         transform: rotate(180deg) translateY(50%);
+         left: -1rem;
+
+         @screen laptop {
+            left: calc(3.8rem * var(--scale));
+         }
+      }
+      &__next {
+         right: -1rem;
+         @screen laptop {
+            right: calc(3.8rem * var(--scale));
+         }
+      }
+   }
+   &__pagination {
+      @apply flex items-center justify-center gap-[.8rem] mt-[2.9rem];
+      @screen laptop {
+         @apply hidden;
+      }
+      .swiper-pagination-bullet {
+         @apply bg-primary/50 rounded-full cursor-pointer;
+         width: 1rem;
+         height: 1rem;
+         transition: background 0.5s ease;
+         &-active {
+            @apply bg-primary;
+         }
+      }
+   }
+   .swiper-container {
+      @apply overflow-hidden py-[2rem] px-[1.6rem];
+      max-width: 100%;
+   }
+   .swiper-slide {
+      @apply h-auto opacity-0;
+      transition: opacity 0.5s ease, transform 1.2s ease;
+   }
+
+   .swiper-slide-prev,
+   .swiper-slide-active,
+   .swiper-slide-next {
+      opacity: 1;
+   }
+}

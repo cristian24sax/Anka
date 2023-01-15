@@ -1,0 +1,32 @@
+.Accordion {
+  &-header {
+    @apply flex flex-col gap-[.2rem];
+  }
+  &-title {
+    @apply bg-[#eeeeee] relative rounded-[.3rem] py-[.5rem] pl-[1.5rem] text-[#4d4d4d] not-italic font-medium text-[1.4rem] font-roboto leading-[2.1rem];
+    border: 0.38px solid #d9d9d9;
+
+    &::after {
+      content: "+";
+      @apply absolute right-[1rem] text-[#ababab];
+    }
+    &.isActive{
+        @apply bg-[#253745]/80 text-[#ffff];
+        &::after{
+            @apply text-[2.4rem];
+            content:"-";
+        }
+    }
+  }
+  &-info{
+    @apply px-[2rem] py-[2rem] text-[1.5rem] bg-[#eeeeee];
+    border:0.03rem solid  #d9d9d9;
+    border-top:0;
+    border-radius:0.3rem;
+  }
+  .noActive{
+    @apply hidden;
+  }
+
+
+}

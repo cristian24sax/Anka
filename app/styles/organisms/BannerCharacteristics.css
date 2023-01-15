@@ -1,0 +1,95 @@
+.charac-banner {
+  @apply px-[2.2rem];
+  @screen laptop {
+    @apply px-0;
+  }
+  &__swiper {
+    @apply py-[4rem] px-[3.6rem] bg-white  relative;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    transform: translateY(-53%);
+    @screen laptop {
+      @apply bg-transparent p-0;
+      box-shadow: none;
+    }
+ 
+  }
+  .service{
+      
+      transform: translateY(-30%);
+      @screen tabletxl{
+        transform:translateY(-39%);
+      }
+      @screen laptop{
+        transform: translateY(-53%);
+      }
+  }
+  &__card {
+    @apply flex items-center  flex-col gap-[1.7rem]  h-full;
+    @screen laptop {
+      @apply bg-white;
+      border-radius: 1rem;
+      padding: 0 calc(4.5rem * var(--scale));
+      padding-top: calc(6.8rem * var(--scale));
+      padding-bottom: calc(6.7rem * var(--scale));
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      height: calc(41.7rem * var(--scale));
+      width: calc(42.8rem* var(--scale));
+    }
+    picture {
+      @apply bg-primary p-[1rem] flex items-center justify-center;
+      height: 7.6rem;
+      width: 7.6rem;
+      border-radius: 1rem;
+      @screen laptop {
+        padding: calc(1.5rem * var(--scale));
+        width: calc(9.6rem*var(--scale));
+        height: calc(9.6rem*var(--scale));
+      }
+      img {
+        object-fit: contain;
+      }
+    }
+    h3 {
+      @apply font-poppins text-[1.5rem] leading-[1rem] text-gray-100 text-center font-medium mt-[.8rem];
+      @screen laptop {
+        font-size: calc(2rem * var(--scale));
+        line-height: calc(1.6rem * var(--scale));
+      }
+    }
+    p {
+      @apply font-roboto text-center text-[1.5rem] text-content leading-[2.9rem] font-light;
+      @screen laptop {
+        font-size: calc(2rem * var(--scale));
+        line-height: calc(3.9rem * var(--scale));
+        width:calc(36rem*var(--scale));
+      }
+    }
+  }
+  &__pagination {
+    @apply flex items-center justify-center mt-[2.8rem];
+    gap: 0.8rem;
+    @screen tabletlg {
+      @apply hidden;
+    }
+    .swiper-pagination-bullet {
+      @apply bg-primary/50 rounded-full cursor-pointer;
+      width: 1rem;
+      height: 1rem;
+      transition: background 0.5s ease;
+      &-active {
+        @apply bg-primary;
+      }
+    }
+  }
+  .swiper-initialized {
+    @apply overflow-hidden;
+    max-width: 100%;
+    @screen laptop {
+      padding: calc(1.5rem * var(--scale));
+    }
+  }
+  .swiper-slide {
+    @apply h-auto;
+  }
+}

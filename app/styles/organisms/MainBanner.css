@@ -1,0 +1,95 @@
+.MainBanner {
+   @apply relative;
+   min-height: 77rem;
+   height: 100%;
+   @media screen(tablet) {
+      height: 55rem;
+   }
+   @media screen(tabletlg) {
+      height: 60rem;
+   }
+   @media screen(laptop) {
+      height: calc(110rem * var(--scale));
+      margin-top: calc(-9rem * var(--scale));
+   }
+   &::after {
+      @apply absolute inset-0;
+      background: rgba(0, 0, 0, 0.45);
+      content: '';
+      mix-blend-mode: multiply;
+   }
+   &-background {
+      @apply absolute inset-0;
+   }
+   &-container {
+      @apply absolute text-white mx-auto;
+      top: 50%;
+      transform: translateY(-70%);
+      left: 0;
+      right: 0;
+      z-index: 1;
+   }
+   &-content {
+      @apply flex flex-col justify-center relative;
+   }
+   &-h1 {
+      @apply font-poppins font-bold text-[2.89rem] leading-[3.9rem] mb-[1.2rem];
+      /* letter-spacing: 0.05em; */
+      @media screen(laptop) {
+         margin-bottom: calc(3.2rem*var(--scale));
+         font-size: calc(6.7rem * var(--scale));
+         line-height: calc(7.7rem * var(--scale));
+         letter-spacing: 0.05em;
+      }
+   }
+   &-h2 {
+      @apply font-poppins font-light text-[1.5rem] leading-[2.4rem] mb-[1rem] uppercase not-italic;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      @media screen(laptop) {
+         line-height: calc(4.6rem * var(--scale));
+         font-size: calc(2.7rem * var(--scale));
+      }
+   }
+   &-p {
+      @apply font-normal font-roboto text-white text-[1.48rem] leading-[2.6rem];
+      letter-spacing: 0.05em;
+      @media screen(laptop) {
+         max-width: 70ch;
+         font-size: calc(2rem * var(--scale));
+         line-height: calc(3.5rem * var(--scale));
+      }
+   }
+   &-picture {
+      @apply flex justify-end;
+      img {
+         @apply hidden;
+         @media screen(laptop) {
+            @apply inline-block;
+            border-radius: 1rem;
+            width: calc(68.5rem * var(--scale));
+            height: calc(70.1rem * var(--scale));
+         }
+      }
+   }
+   &-btn {
+      @apply mt-[3.7rem] flex;
+      @media screen(laptop) {
+         margin-top: calc(3.8rem * var(--scale));
+      }
+   }
+   &-btn-contact {
+      @apply ml-[1rem];
+      @media screen(laptop) {
+         margin-left: calc(2.7rem * var(--scale));
+      }
+   }
+
+   &-i {
+      @apply mr-[1rem] text-[1.2rem] ;
+      @media screen(laptop) {
+         @apply font-semibold;
+         font-size: calc(1.5rem * var(--scale));
+         margin-right: calc(1.5rem * var(--scale));
+      }
+   }
+}

@@ -1,0 +1,69 @@
+.Footer {
+   @apply text-white bg-night py-[4rem];
+   @screen laptop {
+      @apply flex items-center;
+      padding: calc(4rem * var(--scale)) 0;
+   }
+   &__wrap {
+      @apply flex flex-col;
+      @screen laptop {
+         @apply flex-row justify-between h-full items-center relative;
+         gap: calc(9rem * var(--scale));
+      }
+      .icon-arrow-right {
+         @apply hidden;
+         @screen laptop {
+            @apply cursor-pointer rounded-full bg-primary text-white flex items-center justify-center;
+            width: 5.5rem;
+            height: 5.5rem;
+            transform: rotate(-90deg);
+            order: 2;
+         }
+      }
+   }
+   &__list {
+      @apply flex justify-center flex-col;
+      gap: 2rem;
+      @screen laptop {
+         @apply flex-row h-full items-start justify-center;
+         gap: calc(9rem * var(--scale));
+         padding: 0;
+         order: 1;
+         border: none;
+      }
+      &__item {
+         @apply flex gap-[1.5rem];
+         @screen laptop {
+            @apply items-center h-full;
+         }
+         span {
+            @apply text-[1.7rem];
+         }
+         a {
+            @apply text-[1.4rem] font-light font-roboto;
+            @screen tabletxl {
+               letter-spacing: 0.05em;
+            }
+
+            @screen laptop {
+               font-size: calc(1.8rem * var(--scale));
+            }
+         }
+      }
+   }
+   .socials {
+      @apply mt-[2.4rem] pt-[2.2rem] flex gap-[1rem];
+      border-top: 1px solid white;
+      @screen laptop {
+         @apply m-0 p-0;
+         gap: calc(1.5rem * var(--scale));
+         border: none;
+      }
+      .socials__item {
+         @apply text-[1.9rem];
+         @screen laptop {
+            font-size: calc(2.2rem * var(--scale));
+         }
+      }
+   }
+}

@@ -1,0 +1,118 @@
+.Header {
+  @apply sticky flex justify-end gap-[3rem] isolate bg-black;
+  height: 6rem;
+  top: -1px;
+  z-index: 15;
+  &.White {
+    /* @apply bg-white; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    &::after {
+      /* @apply bg-white; */
+    }
+    .Navbar-a {
+      @screen laptop {
+        @apply text-white;
+      }
+    }
+    /* .Header-logo {
+      @screen laptop {
+        @apply bg-white;
+        max-width: calc(16.6rem*var(--scale));
+        height: calc(13rem*var(--scale));
+        img {
+          width: calc(14rem*var(--scale));
+          height: calc(13rem*var(--scale));
+        }
+      }
+    } */
+  }
+  @media screen(laptop) {
+    /* @apply bg-transparent; */
+    &::after {
+      @apply absolute inset-0 bg-[#434343]/40;
+      content: '';
+      transition: background 0.5s ease;
+      mix-blend-mode: multiply;
+      z-index: -1;
+    }
+    gap: calc(4.5rem * var(--scale));
+    padding: 0 calc(21rem * var(--scale));
+    height: calc(8.9rem * var(--scale));
+  }
+  /* &-logo {
+    left: 2rem;
+    @apply absolute bg-white;
+    border-radius: 0px 0px 10px 10px;
+    @media screen(laptop) {
+      @apply relative bg-[#434343]/40;
+      left: calc(-0.5rem * var(--scale));
+      top: calc(0rem * var(--scale));
+    }
+    picture {
+      @media screen(laptop) {
+        overflow: visible;
+      }
+    }
+  } */
+  &-logo,
+  img {
+    height: 5.5rem;
+    padding-top: 1rem;
+    object-fit: contain;
+    @media screen(laptop) {
+      width: calc(20.6rem * var(--scale));
+      /* height: calc(10.6rem * var(--scale)); */
+    }
+  }
+  /* &-logo.bg {
+    @screen laptop {
+      @apply bg-white;
+      width: calc(13rem*var(--scale));
+      height: calc(13rem*var(--scale));
+      img {
+        width: calc(13rem*var(--scale));
+        height: calc(13rem*var(--scale));
+      }
+    }
+  }
+  &-logo.white {
+    @apply bg-white;
+  }
+ */
+
+  
+  .socials {
+    @apply flex items-center z-10 justify-start gap-[1.2rem];
+    @media screen(laptop) {
+      @apply hidden;
+    }
+    &__link {
+      @apply text-white text-[2.2rem];
+      transition: color 0.5s ease;
+    }
+    &.visibleForMenuMobile {
+      .socials__link {
+        @apply text-white;
+      }
+    }
+  }
+  &-menuIcon {
+    &.isActive {
+      @apply z-10;
+    }
+  }
+  &-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    @apply fixed inset-0 bg-black/70 pointer-events-none w-full h-screen;
+
+    @media screen(laptop) {
+      @apply hidden;
+    }
+
+    &.isActive {
+      opacity: 1;
+      @apply pointer-events-auto;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.ServicesList {
+   @apply flex flex-col gap-[2.3rem] px-[2.3rem];
+   margin-top: 2rem ;
+   /* test */
+   @media screen(tablet) {
+      @apply grid grid-cols-2 ;
+   }
+
+   @media screen(tabletxl) {
+      @apply grid-cols-4 px-0;
+      gap: calc(2rem * var(--scale));
+      margin-top: calc(2.5rem * var(--scale));
+   }
+}

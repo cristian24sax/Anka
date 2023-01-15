@@ -1,0 +1,155 @@
+.ServicesDetails {
+   &__about {
+      @apply pb-[4.5rem];
+      margin-top: -6.5rem;
+      @media screen(laptop) {
+         padding-bottom: calc(3.5rem * var(--scale));
+         margin-top:calc(2.5rem*var(--scale));
+      }
+      &__grid {
+         @media screen(laptop) {
+            @apply grid;
+            grid-template-columns: 38% 55%;
+            gap: 7%;
+            margin-top: calc(-19rem * var(--scale));
+         }
+      }
+      &__btnUs{
+         @apply hidden;
+         @screen laptop{
+            @apply block;
+         }
+      }
+      &__info {
+         @apply mb-[4.7rem];
+         p {
+            @apply font-roboto font-light leading-[2.6rem] text-content text-[1.5rem];
+            @media screen(laptop) {
+               font-size: calc(2rem * var(--scale));
+               line-height: calc(3.9rem * var(--scale));
+            }
+         }
+         ul {
+            @apply flex flex-col mt-[3rem];
+            gap: 2rem;
+         }
+         li {
+            &::before {
+               content: '\e90e';
+               font-family: 'icomoon' !important;
+               @apply bg-secondary text-black rounded-full flex items-center justify-center text-[1.3rem];
+               box-shadow: 0px 0px 4.51436px rgba(0, 0, 0, 0.15);
+               width: 2.1rem;
+               height: 2.1rem;
+               @media screen(laptop) {
+                  font-size: calc(1.8rem * var(--scale));
+                  box-shadow: 0px 0px 6.4473px rgba(0, 0, 0, 0.15);
+                  width: calc(3rem * var(--scale));
+                  height: calc(3rem * var(--scale));
+               }
+            }
+            @apply flex items-center font-roboto text-content text-[1.5rem];
+            gap: 1.3rem;
+            @media screen(laptop) {
+               font-size: calc(1.9rem * var(--scale));
+               line-height: calc(3.2rem * var(--scale));
+            }
+         }
+         &__btn {
+            @apply mt-[4.5rem];
+            @media screen(laptop) {
+               margin-top: calc(4rem * var(--scale));
+            }
+         }
+      }
+      &__swiper {
+         @apply relative;
+         @media screen(laptop) {
+            @apply px-0;
+         }
+      }
+      &__pagination {
+         @apply flex items-center justify-center mt-[2.8rem];
+         gap: 0.8rem;
+         @media screen(laptop) {
+            margin-top: calc(4rem * var(--scale));
+            gap: calc(1.1rem * var(--scale));
+         }
+         .swiper-pagination-bullet {
+            @apply  rounded-full cursor-pointer;
+            background:rgba(41, 41, 41, 0.5);
+            width: 1rem;
+            height: 1rem;
+            transition: background 0.5s ease;
+            &-active {
+               @apply bg-secondary;
+            }
+         }
+      }
+
+      &__zoom{
+         @apply absolute z-[2] right-[2rem] p-[0.9rem] rounded-full bg-white top-[1rem];
+         @screen laptop{
+            top:calc(2rem*var(--scale));
+            right: calc(3rem*var(--scale));
+            padding: calc(1.7rem*var(--scale));
+            font-size:calc(2.2rem*var(--scale));
+         }
+         
+      }
+      &__btn {
+         @apply bg-white text-[#252525] rounded-full absolute flex items-center justify-center cursor-pointer;
+         z-index: 5;
+         width: 4.3rem;
+         height: 4.3rem;
+         top: 45%;
+         transform: translateY(-50%);
+         transition: opacity, pointer-events 0.5s ease;
+
+         &.swiper-button-disabled {
+            /* @apply !pointer-events-none; */
+            /* cursor:default; */
+            cursor:not-allowed;
+            opacity: 0.55;
+            z-index: 50;
+            
+         }
+         @media screen(laptop) {
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            width: calc(7.3rem * var(--scale));
+            height: calc(7.3rem * var(--scale));
+            font-size: calc(2rem * var(--scale));
+            transition: background 0.5s ease;
+            /* transform: translateY(-170%); */
+            top:calc(23.8rem*var(--scale));
+            &:hover {
+            @apply bg-primary text-white;
+         }
+         }
+         &__prev {
+            left: -1.5rem;
+            transform: translateY(-50%) rotate(180deg);
+            @media screen(laptop) {
+               transform:  rotate(180deg);
+               left: -3.8rem;
+               top:calc(20rem*var(--scale));
+   
+            }
+         }
+         &__next {
+            right: -1.5rem;
+            @media screen(laptop) {
+               right: -3.8rem;
+            }
+         }
+      }
+      .swiper-initialized {
+         @apply overflow-hidden;
+      }
+      .swiper-slide {
+         img {
+            @apply mx-auto;
+         }
+      }
+   }
+}

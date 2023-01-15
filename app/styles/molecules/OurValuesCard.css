@@ -1,0 +1,57 @@
+.OurValuesCard {
+   @apply p-[1rem] relative mx-auto;
+   border-radius: 1rem;
+   border: 2px dashed #ff3f39;
+   width: 17.1rem;
+   height: 17.1rem;
+   @media screen(laptop) {
+      width: calc(23.5rem * var(--scale));
+      height: calc(23.5rem * var(--scale));
+      padding: calc(1.4rem * var(--scale));
+   }
+   &-ctn {
+      @apply bg-secondary w-full h-full flex flex-col items-center justify-center gap-[1rem];
+      border-radius: 1rem;
+      @media screen(laptop) {
+         gap: calc(1rem * var(--scale));
+      }
+   }
+   &-picture {
+      @apply flex items-center justify-center mx-auto;
+      width: 6rem;
+      height: auto;
+
+      @media screen(laptop) {
+         height: calc(9rem * var(--scale));
+         width: calc(7rem * var(--scale));
+      }
+      @media screen(desktop) {
+         width: calc(9rem * var(--scale));
+      }
+      img {
+         object-fit: contain;
+      }
+   }
+   &-h3 {
+      @apply text-[1.5rem] font-roboto font-light text-white;
+      letter-spacing: 0.05em;
+      @media screen(laptop) {
+         font-size: calc(2.1rem * var(--scale));
+         line-height: calc(3.7rem * var(--scale));
+      }
+   }
+   &-span {
+      @apply flex items-center justify-center bg-primary rounded-full text-white text-[1.7rem] font-bold absolute;
+      top: -8%;
+      left: -8%;
+      width: 5rem;
+      height: 5rem;
+      border: 4.37037px solid #252525;
+      @media screen(laptop) {
+         font-size: calc(2.3rem * var(--scale));
+         width: calc(7rem * var(--scale));
+         height: calc(7rem * var(--scale));
+         border: 6px solid #292928;
+      }
+   }
+}

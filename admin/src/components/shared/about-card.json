@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_about_cards",
+  "info": {
+    "displayName": "AboutCard"
+  },
+  "options": {},
+  "attributes": {
+    "section": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

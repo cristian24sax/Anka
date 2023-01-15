@@ -1,0 +1,20 @@
+.Information {
+   &.center {
+      @apply flex flex-col items-center justify-center text-center;
+   }
+   /* &-h3 {
+      @apply text-[1.5rem] uppercase text-primary font-poppins font-semibold leading-[2.6rem] mb-[.7rem];
+      @media screen(laptop) {
+         font-size: calc(2rem * var(--scale));
+         line-height: calc(3.8rem * var(--scale));
+      }
+   } */
+   &-h2 {
+      @apply text-[2.5rem] font-poppins font-semibold leading-[3.2rem] mt-[.5rem] text-primary mb-[2rem];
+      @media screen(laptop) {
+         font-size: calc(6rem * var(--scale));
+         line-height: calc(5.2rem * var(--scale));
+         margin-top: calc(0.7rem * var(--scale));
+      }
+   }
+}
