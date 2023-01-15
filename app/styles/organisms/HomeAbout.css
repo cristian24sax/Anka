@@ -1,5 +1,5 @@
 .HomeAbout {
-  @apply py-[2.5rem];
+  @apply py-[2.5rem] bg-[#eee]/60;
 
   &-ctn {
     @apply flex flex-col gap-[2rem];

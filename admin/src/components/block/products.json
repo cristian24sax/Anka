@@ -12,10 +12,7 @@
     "content": {
       "type": "text"
     },
-    "subtitle": {
-      "type": "string"
-    },
-    "list_products": {
+    "range_products": {
       "type": "richtext"
     }
   }

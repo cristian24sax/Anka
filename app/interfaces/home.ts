@@ -12,6 +12,8 @@ export interface HomeData {
    publishedAt: string
    service: HomeService
    about :HomeAbout
+   homeBanner: MainBanner
+   HomeProducts: HomeProducts
 
    //    main_banner: MainBanner
 //    home_characteristics: HomeCharacteristics
@@ -21,6 +23,18 @@ export interface HomeData {
 
 //    home_location: HomeLocation
 //    seo: SEO
+}
+export interface HomeProducts{
+   title:string
+   content:string
+   range_products:string
+}
+export interface MainBanner{
+   title:string
+   subtitle:string
+   img:Img
+   content:string
+   img_mobile:Img
 }
 export interface HomeService{
    title:string;

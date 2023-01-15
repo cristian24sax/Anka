@@ -10,13 +10,14 @@ export interface HomeServiceProps {
   title: string;
   content: string;
   img: Img;
+  section:string
 }
 
-export const HomeService = ({ title, content, img }: HomeServiceProps) => {
+export const HomeService = ({ title, content, img,section }: HomeServiceProps) => {
   const { polylang } = useGenerals();
-  console.log(img.url);
+  // console.log(img.url);
   return (
-    <section className="HomeService">
+    <section className="HomeService" data-section={section}>
       <Container>
         <Information title={title} type="center" />
         <div className="HomeService-ctn">
@@ -32,7 +33,7 @@ export const HomeService = ({ title, content, img }: HomeServiceProps) => {
           <div className="HomeService-content">
             <div className="HomeService-content__info">{content}</div>
             <div className="HomeService-btn">
-            <Button url="/services" type="primary" >{polylang.lbl_see_more}</Button>
+            <Button url="/services" type="primary" >{polylang.lbl_see_service}</Button>
             </div>
           </div>
         </div>

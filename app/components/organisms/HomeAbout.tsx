@@ -1,26 +1,27 @@
 // import Image from 'next/future/image'
-import Image from "next/image";
-import { useGenerals } from "../../context/generals.context";
-import { Img } from "../../interfaces";
-import { CardsAbout } from "../../interfaces/home";
-import { ImageStrapi } from "../../lib/utils";
-import { Information } from "../atoms/Information";
+import Image from 'next/image'
+import { useGenerals } from '../../context/generals.context'
+import { Img } from '../../interfaces'
+import { CardsAbout } from '../../interfaces/home'
+import { ImageStrapi } from '../../lib/utils'
+import { Information } from '../atoms/Information'
 
-import { Container } from "../globals";
-import { OurAccordion } from "./OurAccordion";
-import { OurTabs } from "./OurTabs";
+import { Container } from '../globals'
+import { OurAccordion } from '../molecules/OurAccordion'
+import { OurTabs } from '../molecules/OurTabs'
 
 interface HomeAboutProps {
-  title: string;
-  img: Img;
-  cards: CardsAbout[];
+  title: string
+  img: Img
+  cards: CardsAbout[]
+  section:string
 }
 
-export const HomeAbout = ({ title, img, cards }: HomeAboutProps) => {
-  const { polylang } = useGenerals();
-  console.log(cards);
+export const HomeAbout = ({ title, img, cards,section}: HomeAboutProps) => {
+  const { polylang } = useGenerals()
+  // console.log(cards)
   return (
-    <section className="HomeAbout">
+    <section className="HomeAbout" data-section={section}>
       <Container>
         <Information title={title} type="center" />
         <div className="HomeAbout-ctn">
@@ -42,5 +43,5 @@ export const HomeAbout = ({ title, img, cards }: HomeAboutProps) => {
         </div>
       </Container>
     </section>
-  );
-};
+  )
+}

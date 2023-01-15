@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useGenerals } from "../../context/generals.context"
 import { useNavbarContext } from "../../context/navbar.context"
 import { Socials ,Logo, MenuIcon} from "../atoms"
-import { NavBar } from "../organisms/NavBar"
+import { NavBar } from "../molecules/NavBar"
 
 
 export const Header = ({})=>{

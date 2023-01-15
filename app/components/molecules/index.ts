@@ -1,3 +1,3 @@
-export * from './HomeAbout';
-export * from './HomeService';
-export * from './InfoHeader';
+export * from '../organisms/HomeAbout'
+export * from '../organisms/HomeService'
+export * from './InfoHeader'

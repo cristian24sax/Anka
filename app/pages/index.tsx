@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
-import { GetStaticProps } from "next";
-import { getGenerals } from "../lib/getGenerals";
+import type { NextPage } from 'next'
+import { GetStaticProps } from 'next'
+import { getGenerals } from '../lib/getGenerals'
 // import { Home, HomeData } from '../interfaces'
 // import { SeoEngine } from '../components/globals'
-import { baseApi } from "../lib/baseApi";
+import { baseApi } from '../lib/baseApi'
 // import {
 //    BannerCharacteristics,
 //    BannerInternal,
@@ -14,14 +14,16 @@ import { baseApi } from "../lib/baseApi";
 //    HomeServices,
 //    MainBanner,
 // } from '../components/organisms'
-import { HomeData } from "../interfaces/home";
+import { HomeData } from '../interfaces/home'
 // import { HomeAbout } from "../components/molecules";
-import { HomeAbout } from "../components/molecules";
-import { HomeService } from "../components/molecules/HomeService";
+import { HomeAbout } from '../components/molecules'
+import { HomeService } from '../components/organisms/HomeService'
+import { HomeBanner } from '../components/organisms/HomeBanner'
+import { HomeProduct } from '../components/organisms/HomeProduct'
 // import { HomeHowWork } from '../components/organisms/HomeHowWork'
 
 interface HomeProps {
-  home: HomeData;
+  home: HomeData
   //  services: ServiceData[]
 }
 
@@ -51,15 +53,31 @@ const HomePage: NextPage<HomeProps> = ({ home }) => {
   // console.log(home.seo)
   return (
     <main className={`min-h-screen main-page`}>
+      <HomeBanner
+        title={home.homeBanner.title}
+        subtitle={home.homeBanner.subtitle}
+        content={home.homeBanner.content}
+        img={home.homeBanner.img}
+        img_mobile={home.homeBanner.img_mobile}
+        section="/"
+      />
       <HomeAbout
         title={home.about.title}
         img={home.about.img}
         cards={home.about.card}
+        section="/our"
       />
       <HomeService
         title={home.service.title}
         content={home.service.content}
         img={home.service.img}
+        section="/service"
+      />
+      <HomeProduct
+        title={home.HomeProducts.title}
+        content={home.HomeProducts.content}
+        list={home.HomeProducts.range_products}
+        section="/products"
       />
       {/* <HomeAbout title={home.service.title} content={home.service.content} /> */}
       {/* <MainBanner
@@ -104,23 +122,23 @@ const HomePage: NextPage<HomeProps> = ({ home }) => {
          />
          <SeoEngine seo={home.seo} /> */}
     </main>
-  );
-};
+  )
+}
 
 export const getStaticProps: GetStaticProps = async () => {
-  const generals = await getGenerals();
+  const generals = await getGenerals()
 
   const [{ data: home }] = await Promise.all([
-    baseApi.get("/home?populate=deep,10"),
+    baseApi.get('/home?populate=deep,10'),
     // baseApi.get<Service>('/services?populate=deep,10'),
-  ]);
+  ])
   return {
     props: {
       home: home.data,
       generals,
     },
     revalidate: 1,
-  };
-};
+  }
+}
 
-export default HomePage;
+export default HomePage

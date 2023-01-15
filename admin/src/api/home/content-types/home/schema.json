@@ -26,16 +26,15 @@
       "repeatable": false,
       "component": "block.services"
     },
-    "banner": {
-      "displayName": "banner_internal",
-      "type": "component",
-      "repeatable": false,
-      "component": "block.banner-internal"
-    },
-    "products": {
+    "HomeProducts": {
       "type": "component",
       "repeatable": false,
       "component": "block.products"
+    },
+    "homeBanner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.banner-internal"
     }
   }
 }
