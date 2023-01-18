@@ -36,7 +36,7 @@ export const NavBar: FC<NavbarProps> = ({ isMenuOpen, closeMenu }) => {
       </div>
       <ul className="Navbar-ul">
         {polylang.menu.map(({ label, url }, index) =>
-          router.asPath === '/' ? (
+          router.asPath === '/'  ? (
             <li
               key={index}
               className={`Navbar-a`}

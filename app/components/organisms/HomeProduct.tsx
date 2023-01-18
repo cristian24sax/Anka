@@ -21,7 +21,7 @@ export const HomeProduct = ({ title, content, list,section }: HomeProductProps) 
             <Information title={title}/>
             <p className="HomeProduct-p">{content}</p>
             <div>
-              <Button type="primary">{polylang.lbl_see_more}</Button>
+              <Button url="/products" type="primary">{polylang.lbl_see_more}</Button>
             </div>
           </div>
           <div className="HomeProduct-right">

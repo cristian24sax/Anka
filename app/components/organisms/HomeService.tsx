@@ -33,7 +33,7 @@ export const HomeService = ({ title, content, img,section }: HomeServiceProps) =
           <div className="HomeService-content">
             <div className="HomeService-content__info">{content}</div>
             <div className="HomeService-btn">
-            <Button url="/services" type="primary" >{polylang.lbl_see_service}</Button>
+            <Button url="/service" type="primary" >{polylang.lbl_see_service}</Button>
             </div>
           </div>
         </div>

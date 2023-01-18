@@ -1,34 +1,5 @@
 .HomeBanner {
   @apply relative isolate;
-  /* min-height: 77rem;
-  height: 100%;
-  @media screen(tablet) {
-    height: 55rem;
-  }
-  @media screen(tabletlg) {
-    height: 60rem;
-  }
-  @media screen(laptop) {
-    height: calc(100rem * var(--scale));
-    margin-top: calc(-9rem * var(--scale));
-  } */
-  /* &::after {
-    @apply absolute inset-0;
-    background: rgba(0, 0, 0, 0.2);
-    content: '';
-    mix-blend-mode: multiply;
-  } */
-  /* &-background {
-    @apply absolute inset-0;
-  } */
-  /* &-container {
-    @apply absolute text-white mx-auto;
-    top: 50%;
-    transform: translateY(-70%);
-    left: 0;
-    right: 0;
-    z-index: 1;
-  } */
   &-picture {
     @apply w-full  px-[2.4rem];
     background-image: var(--bg-mobile);
@@ -80,7 +51,7 @@
     }
   }
   &-h1 {
-    @apply font-poppins font-bold text-[2.89rem] leading-[3.9rem] mb-[1.2rem];
+    @apply font-poppins font-bold text-[2.89rem] text-[#eee]/90 leading-[3.9rem] mb-[1.2rem];
     /* letter-spacing: 0.05em; */
     @media screen(laptop) {
       margin-bottom: calc(3.2rem * var(--scale));
@@ -91,8 +62,8 @@
     }
   }
   &-h2 {
-    @apply font-poppins font-light text-[1.5rem] leading-[2.4rem] mb-[1rem] uppercase not-italic;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @apply font-roboto font-normal text-[1.5rem] text-secondary   leading-[2.4rem] mb-[1rem] uppercase not-italic;
+    text-shadow: 0px 4px 14px rgba(0, 0, 0, 0.35);
     @media screen(laptop) {
       line-height: calc(4.6rem * var(--scale));
       font-size: calc(2.7rem * var(--scale));

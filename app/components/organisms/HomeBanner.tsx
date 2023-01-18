@@ -30,7 +30,7 @@ export const HomeBanner = ({
         className="HomeBanner-picture"
         style={
           {
-            '--bg-desktop': `url(${ImageStrapi(img.url)})}`,
+            '--bg-desktop': `url(${ImageStrapi(img.url)})`,
             // '--bg-mobile': `url(${ImageStrapi(img_mobile.url)})`,
           } as CSSProperties
         }

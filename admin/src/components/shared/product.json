@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_products",
+  "info": {
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "float"
+    },
+    "qty": {
+      "type": "integer"
+    },
+    "creationDate": {
+      "type": "date"
+    }
+  }
+}

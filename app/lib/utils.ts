@@ -23,5 +23,5 @@ export const goToSection = (sectionName: string) => {
  }
 
  export const ImageStrapi = (url:string)=>{
-    return  `http://localhost:1337${url}`
+    return  `http://localhost:1338${url}`
  }

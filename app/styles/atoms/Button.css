@@ -81,7 +81,7 @@
   border-radius: 5px;
 
   &.primary {
-    @apply bg-primary text-white font-semibold text-[1.4rem] leading-[1rem] py-[1.5rem] px-[1.9rem];
+    @apply bg-secondary text-black font-semibold text-[1.4rem] leading-[1rem] py-[1.5rem] px-[1.9rem];
     letter-spacing: 0.03em;
     @screen laptop {
       @apply inline-block;
@@ -131,7 +131,7 @@
     }
   }
   &.secondary {
-    @apply bg-primary font-medium text-[1.3rem] uppercase leading-[1.5rem] text-white py-[1rem];
+    @apply bg-secondary font-medium text-[1.3rem] uppercase leading-[1.5rem] text-white py-[1rem];
     border-radius: 0;
     border-top: 1.6px solid rgba(255, 255, 255, 0.35);
     border-bottom: 1.6px solid rgba(255, 255, 255, 0.35);
