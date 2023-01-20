@@ -15,17 +15,6 @@
     "title": {
       "type": "string"
     },
-    "about": {
-      "type": "component",
-      "repeatable": false,
-      "component": "block.about"
-    },
-    "service": {
-      "displayName": "services",
-      "type": "component",
-      "repeatable": false,
-      "component": "block.services"
-    },
     "HomeProducts": {
       "type": "component",
       "repeatable": false,
@@ -35,6 +24,11 @@
       "type": "component",
       "repeatable": false,
       "component": "block.banner-internal"
+    },
+    "homeCard": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.home-card"
     }
   }
 }

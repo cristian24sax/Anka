@@ -1,0 +1,11 @@
+.HomeCard{
+    @apply py-[1.5rem];
+
+
+
+
+
+    @screen laptop{
+        @apply py-[4rem];
+    }
+}

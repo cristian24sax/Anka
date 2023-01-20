@@ -10,8 +10,9 @@ export interface HomeData {
    createdAt: string
    updatedAt: string
    publishedAt: string
-   service: HomeService
-   about :HomeAbout
+   // service: HomeService
+   // about :HomeAbout
+   homeCard: HomeCard
    homeBanner: MainBanner
    HomeProducts: HomeProducts
 
@@ -23,6 +24,15 @@ export interface HomeData {
 
 //    home_location: HomeLocation
 //    seo: SEO
+}
+export interface HomeCard{
+   title:string
+   cards: Card[]
+}
+export interface Card{
+   title:string
+   content:string
+   img:Img
 }
 export interface HomeProducts{
    title:string

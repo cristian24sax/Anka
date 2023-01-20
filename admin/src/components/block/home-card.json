@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_block_home_cards",
+  "info": {
+    "displayName": "HomeCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card-section"
+    }
+  }
+}

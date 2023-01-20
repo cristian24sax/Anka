@@ -35,7 +35,6 @@ export const HomeBanner = ({
           } as CSSProperties
         }
       >
-        {/* <Image loader={()=>ImageStrapi(img.url)} src={ImageStrapi(img.url)} fill alt="homebanner-bg"/> */}
       
       <div className="HomeBanner-content">
         <h2 className='HomeBanner-h2'>{subtitle}</h2>

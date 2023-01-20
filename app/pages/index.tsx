@@ -20,6 +20,7 @@ import { HomeAbout } from '../components/molecules'
 import { HomeService } from '../components/organisms/HomeService'
 import { HomeBanner } from '../components/organisms/HomeBanner'
 import { HomeProduct } from '../components/organisms/HomeProduct'
+import { HomeCard } from '../components/organisms'
 // import { HomeHowWork } from '../components/organisms/HomeHowWork'
 
 interface HomeProps {
@@ -61,13 +62,14 @@ const HomePage: NextPage<HomeProps> = ({ home }) => {
         img_mobile={home.homeBanner.img_mobile}
         section="/"
       />
-      <HomeAbout
+      {/* <HomeAbout
         title={home.about.title}
         img={home.about.img}
         cards={home.about.card}
         section="/our"
-      />
-      <HomeService
+      /> */}
+      <HomeCard title={home.homeCard.title} cards={home.homeCard.cards}/>
+      {/* <HomeService
         title={home.service.title}
         content={home.service.content}
         img={home.service.img}
@@ -78,7 +80,7 @@ const HomePage: NextPage<HomeProps> = ({ home }) => {
         content={home.HomeProducts.content}
         list={home.HomeProducts.range_products}
         section="/products"
-      />
+      /> */}
       {/* <HomeAbout title={home.service.title} content={home.service.content} /> */}
       {/* <MainBanner
             title={home.main_banner.titles.title}
