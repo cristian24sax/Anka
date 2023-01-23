@@ -36,17 +36,17 @@
       "type": "boolean",
       "default": false
     },
-    "categories": {
+    "subcategory": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
+      "relation": "manyToOne",
+      "target": "api::subcategory.subcategory",
       "inversedBy": "products"
     },
-    "subcategories": {
+    "category": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::subcategory.subcategory",
-      "mappedBy": "products"
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
     }
   }
 }

@@ -14,21 +14,25 @@ import { baseApi } from '../lib/baseApi'
 //    HomeServices,
 //    MainBanner,
 // } from '../components/organisms'
-import { HomeData } from '../interfaces/home'
+import { Home, HomeData } from '../interfaces/home'
 // import { HomeAbout } from "../components/molecules";
 import { HomeAbout } from '../components/molecules'
 import { HomeService } from '../components/organisms/HomeService'
 import { HomeBanner } from '../components/organisms/HomeBanner'
 import { HomeProduct } from '../components/organisms/HomeProduct'
 import { HomeCard } from '../components/organisms'
+import { HomeBannerMiddle } from '../components/organisms/HomeBannerMiddle'
+import { CategoriesData } from '../interfaces/categories'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 // import { HomeHowWork } from '../components/organisms/HomeHowWork'
 
 interface HomeProps {
   home: HomeData
-  //  services: ServiceData[]
+  // categories: CategoriesData
 }
 
-const HomePage: NextPage<HomeProps> = ({ home }) => {
+const HomePage: NextPage<HomeProps> = ({ home, categories }) => {
   // useEffect(() => {
   //    const elements = document.querySelectorAll('[data-section]')
   //    setElements(elements)
@@ -50,8 +54,24 @@ const HomePage: NextPage<HomeProps> = ({ home }) => {
   //       goToSection(scrolltoSectionFromContact)
   //    }
   // }, [scrolltoSectionFromContact])
-  // console.log(home.about)
+  // console.log(categories)
   // console.log(home.seo)
+  const [cantProduc, setCantProduc] = useState<number>()
+  // const type= "Faros Led"
+  // const Fetchcategories = async () => {
+  //   const result = await axios.get(
+  //     `http://localhost:1337/api/products?[filters][category][name][$eq]=${type}`
+  //   )
+  //   setCantProduc(result.data)
+  // }
+
+  // useEffect(() => {
+  //   Fetchcategories()
+  // }, [])
+
+  const type=categories.map(cat => cat.category.name)
+  // console.log(categories?.filter(cat => cat.category.name==='Faros Led'))
+
   return (
     <main className={`min-h-screen main-page`}>
       <HomeBanner
@@ -68,7 +88,11 @@ const HomePage: NextPage<HomeProps> = ({ home }) => {
         cards={home.about.card}
         section="/our"
       /> */}
-      <HomeCard title={home.homeCard.title} cards={home.homeCard.cards}/>
+      <HomeCard title={home.homeCard.title} cards={home.homeCard.cards} />
+      <HomeBannerMiddle
+        text={home.banner_middle.description}
+        img={home.banner_middle.img.url}
+      />
       {/* <HomeService
         title={home.service.title}
         content={home.service.content}
@@ -130,13 +154,14 @@ const HomePage: NextPage<HomeProps> = ({ home }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const generals = await getGenerals()
 
-  const [{ data: home }] = await Promise.all([
-    baseApi.get('/home?populate=deep,10'),
-    // baseApi.get<Service>('/services?populate=deep,10'),
+  const [{ data: home }, { data: categories }] = await Promise.all([
+    baseApi.get<Home>('/home?populate=deep'),
+    baseApi.get('/products?populate=*'),
   ])
   return {
     props: {
       home: home.data,
+      categories: categories.data,
       generals,
     },
     revalidate: 1,

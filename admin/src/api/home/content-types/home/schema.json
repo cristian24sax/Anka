@@ -29,6 +29,11 @@
       "type": "component",
       "repeatable": false,
       "component": "block.home-card"
+    },
+    "banner_middle": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.banner-middle"
     }
   }
 }

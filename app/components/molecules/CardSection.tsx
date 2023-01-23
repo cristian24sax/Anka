@@ -8,19 +8,21 @@ export interface CardSectionProps {
   title: string;
   content: string;
   img: Img;
+  img_mobile: Img;
 }
 
-export const CardSection = ({ title, content, img }: CardSectionProps) => {
+export const CardSection = ({ title, content, img ,img_mobile }: CardSectionProps) => {
   const { polylang } = useGenerals();
   // console.log(img.url)
   return (
     <div className="CardSection">
       <picture className="CardSection-picture">
+      <source media="(min-width: 1200px)"  srcSet={ImageStrapi(img.url)} />
         <Image
-          loader={() => ImageStrapi(img.url)}
-          src={ImageStrapi(img.url)}
-          width={400}
-          height={400}
+          loader={() => ImageStrapi(img_mobile.url)}
+          src={ImageStrapi(img_mobile.url)}
+          width={500}
+          height={img_mobile.height}
           alt="homebanner-bg"
         />
       </picture>

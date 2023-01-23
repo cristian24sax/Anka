@@ -2,7 +2,7 @@
   @apply flex flex-col mt-[-.5rem] gap-[4rem];
 
   @screen laptop {
-    @apply flex-row mt-[2.5rem];
-    gap: calc(3rem * var(--scale));
+    @apply flex-row mt-[2.5rem] w-[70%] mx-auto;
+    gap:calc(5rem*var(--scale));
   }
 }

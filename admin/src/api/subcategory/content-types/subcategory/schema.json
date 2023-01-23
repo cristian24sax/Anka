@@ -17,15 +17,15 @@
     },
     "products": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::product.product",
-      "inversedBy": "subcategories"
+      "mappedBy": "subcategory"
     },
     "categories": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::category.category",
-      "inversedBy": "subcategories"
+      "mappedBy": "subcategory"
     }
   }
 }

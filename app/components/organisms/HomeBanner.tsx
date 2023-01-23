@@ -31,7 +31,7 @@ export const HomeBanner = ({
         style={
           {
             '--bg-desktop': `url(${ImageStrapi(img.url)})`,
-            // '--bg-mobile': `url(${ImageStrapi(img_mobile.url)})`,
+            '--bg-mobile': `url(${ImageStrapi(img_mobile.url)})`,
           } as CSSProperties
         }
       >
