@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_block_home_products_lists",
+  "info": {
+    "displayName": "HomeProductsList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "List_cardProducts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.product-card"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

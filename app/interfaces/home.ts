@@ -14,7 +14,7 @@ export interface HomeData {
   homeCard: HomeCard
   homeBanner: MainBanner
   HomeProducts: HomeProducts
-
+  HomeProductsList: HomeProductsList
   // service: HomeService
   // about :HomeAbout
   //    main_banner: MainBanner
@@ -25,6 +25,16 @@ export interface HomeData {
 
   //    home_location: HomeLocation
   //    seo: SEO
+}
+export interface HomeProductsList {
+  title: string
+  content:string
+  List_cardProducts: ListProducts[]
+}
+export interface ListProducts {
+  title: string
+  img: Img
+  img_mobile: Img
 }
 export interface HomeMiddle {
   img: Img

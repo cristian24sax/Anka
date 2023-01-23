@@ -3,31 +3,30 @@ import ReactMarkdown from 'react-markdown'
 import { Button } from '../atoms/Button'
 import { Container } from '../globals'
 import { Information } from '../atoms/Information'
+import { ListProducts } from '../../interfaces/home'
+import {  Products, ProductsData } from '../../interfaces/products'
 export interface HomeProductProps {
   title: string
   content: string
-  list: string
+  list: ListProducts[]
   section:string
+  products:Products
 }
 
-export const HomeProduct = ({ title, content, list,section }: HomeProductProps) => {
+export const HomeProduct = ({ title, content, list,section,products }: HomeProductProps) => {
   const { polylang } = useGenerals()
+  // console.log(products?.filter(cat => cat.category.name==='Faros Led'))
   return (
     <div className="HomeProduct" data-section={section}>
       <Container>
-        <div className='HomeProduct-ctn'>
-          <div className="HomeProduct-left">
-            {/* <h3 className="HomeProduct-h3">{title}</h3> */}
-            <Information title={title}/>
-            <p className="HomeProduct-p">{content}</p>
-            <div>
-              <Button url="/products" type="primary">{polylang.lbl_see_more}</Button>
-            </div>
+        <div>{title}</div>
+        <div>{content}</div>
+        {list.map((card,index)=><div key={index}>
+          <div>
+            {card.title}
           </div>
-          <div className="HomeProduct-right">
-            <ReactMarkdown>{list}</ReactMarkdown>
-          </div>
-        </div>
+        </div>)}
+          
       </Container>
     </div>
   )

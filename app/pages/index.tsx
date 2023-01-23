@@ -71,7 +71,7 @@ const HomePage: NextPage<HomeProps> = ({ home, products }) => {
   // }, [])
 
   // const type=categories.map(cat => cat.category.name)
-  // console.log(categories?.filter(cat => cat.category.name==='Faros Led'))
+  // console.log(products?.filter(cat => cat.category.name==='Faros Led'))
 
   return (
     <main className={`min-h-screen main-page`}>
@@ -83,16 +83,17 @@ const HomePage: NextPage<HomeProps> = ({ home, products }) => {
         img_mobile={home.homeBanner.img_mobile}
         section="/"
       />
-      {/* <HomeAbout
-        title={home.about.title}
-        img={home.about.img}
-        cards={home.about.card}
-        section="/our"
-      /> */}
       <HomeCard title={home.homeCard.title} cards={home.homeCard.cards} />
       <HomeBannerMiddle
         text={home.banner_middle.description}
         img={home.banner_middle.img.url}
+      />
+      <HomeProduct
+        title={home.HomeProductsList.title}
+        content={home.HomeProductsList.content}
+        list={home.HomeProductsList.List_cardProducts}
+        products={products}
+        section="/products"
       />
       {/* <HomeService
         title={home.service.title}
@@ -100,12 +101,7 @@ const HomePage: NextPage<HomeProps> = ({ home, products }) => {
         img={home.service.img}
         section="/service"
       />
-      <HomeProduct
-        title={home.HomeProducts.title}
-        content={home.HomeProducts.content}
-        list={home.HomeProducts.range_products}
-        section="/products"
-      /> */}
+ */}
       {/* <HomeAbout title={home.service.title} content={home.service.content} /> */}
       {/* <MainBanner
             title={home.main_banner.titles.title}
