@@ -25,14 +25,15 @@ import { HomeBannerMiddle } from '../components/organisms/HomeBannerMiddle'
 import { CategoriesData } from '../interfaces/categories'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Products, ProductsData } from '../interfaces/products'
 // import { HomeHowWork } from '../components/organisms/HomeHowWork'
 
 interface HomeProps {
   home: HomeData
-  // categories: CategoriesData
+  products: ProductsData
 }
 
-const HomePage: NextPage<HomeProps> = ({ home, categories }) => {
+const HomePage: NextPage<HomeProps> = ({ home, products }) => {
   // useEffect(() => {
   //    const elements = document.querySelectorAll('[data-section]')
   //    setElements(elements)
@@ -69,7 +70,7 @@ const HomePage: NextPage<HomeProps> = ({ home, categories }) => {
   //   Fetchcategories()
   // }, [])
 
-  const type=categories.map(cat => cat.category.name)
+  // const type=categories.map(cat => cat.category.name)
   // console.log(categories?.filter(cat => cat.category.name==='Faros Led'))
 
   return (
@@ -154,14 +155,14 @@ const HomePage: NextPage<HomeProps> = ({ home, categories }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const generals = await getGenerals()
 
-  const [{ data: home }, { data: categories }] = await Promise.all([
+  const [{ data: home }, { data: products }] = await Promise.all([
     baseApi.get<Home>('/home?populate=deep'),
-    baseApi.get('/products?populate=*'),
+    baseApi.get<Products>('/products?populate=*'),
   ])
   return {
     props: {
       home: home.data,
-      categories: categories.data,
+      products: products.data,
       generals,
     },
     revalidate: 1,
