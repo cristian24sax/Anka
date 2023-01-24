@@ -1,57 +1,8 @@
 .HomeProduct {
-  @apply isolate bg-[#eee]/50 py-[3rem];
-  &-ctn {
-    @apply flex flex-col gap-[2.5rem] font-roboto;
+  .cantidad {
+    @apply hidden;
   }
-  &-left {
-    @apply flex flex-col;
-  }
-  &-p {
-    @apply font-roboto not-italic font-light text-[1.5rem] leading-[2.6rem] text-content mb-[2rem];
-  }
-
-  &-right {
-    @apply flex flex-col gap-[1.4rem];
-    h3 {
-      @apply font-roboto text-[1.6rem] font-medium leading-[3rem];
-    }
-    ul {
-      @apply flex flex-col gap-[.9rem];
-    }
-    li {
-      @apply font-roboto not-italic font-light text-[1.5rem] leading-[2.6rem] text-content;
-      &::before {
-        content: '\e90e';
-        font-family: 'icomoon' !important;
-        border: 1px solid #ffb320;
-        box-shadow: 0px 0px 4.51436px rgba(0, 0, 0, 0.15);
-        @apply text-primary text-[1.4rem] p-[.2rem] mr-[1.4rem] rounded-full;
-      }
-    }
-  }
-
-  @screen laptop {
-    @apply py-[9rem];
-    &-ctn {
-      @apply flex flex-row justify-between;
-    }
-    &-p {
-      font-size: calc(1.9rem * var(--scale));
-      line-height: calc(3.2rem * var(--scale));
-      margin-bottom: calc(3.5rem * var(--scale));
-    }
-    &-left {
-      @apply w-[50%];
-    }
-    &-right {
-      @apply w-[30%];
-      margin-top: calc(5rem * var(--scale));
-      h3 {
-        font-size: calc(2.1rem * var(--scale));
-      }
-      li {
-        font-size: calc(1.9rem * var(--scale));
-      }
-    }
+  .cantidad:hover {
+    @apply flex bg-[blue];
   }
 }

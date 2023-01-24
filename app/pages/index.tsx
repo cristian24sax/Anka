@@ -30,7 +30,7 @@ import { Products, ProductsData } from '../interfaces/products'
 
 interface HomeProps {
   home: HomeData
-  products: ProductsData
+  products: Products
 }
 
 const HomePage: NextPage<HomeProps> = ({ home, products }) => {
@@ -57,7 +57,7 @@ const HomePage: NextPage<HomeProps> = ({ home, products }) => {
   // }, [scrolltoSectionFromContact])
   // console.log(categories)
   // console.log(home.seo)
-  const [cantProduc, setCantProduc] = useState<number>()
+  
   // const type= "Faros Led"
   // const Fetchcategories = async () => {
   //   const result = await axios.get(
@@ -84,15 +84,14 @@ const HomePage: NextPage<HomeProps> = ({ home, products }) => {
         section="/"
       />
       <HomeCard title={home.homeCard.title} cards={home.homeCard.cards} />
-      <HomeBannerMiddle
+      {/* <HomeBannerMiddle
         text={home.banner_middle.description}
         img={home.banner_middle.img.url}
-      />
+      /> */}
       <HomeProduct
         title={home.HomeProductsList.title}
         content={home.HomeProductsList.content}
         list={home.HomeProductsList.List_cardProducts}
-        products={products}
         section="/products"
       />
       {/* <HomeService
@@ -158,7 +157,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       home: home.data,
-      products: products.data,
+      products: products,
       generals,
     },
     revalidate: 1,
