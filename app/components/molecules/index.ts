@@ -1,3 +1,5 @@
 export * from '../organisms/HomeAbout'
 export * from '../organisms/HomeService'
 export * from './InfoHeader'
+export * from './HomeProductList'
+export * from './HomeCardProducts'

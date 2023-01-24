@@ -1,8 +1,8 @@
 .HomeProduct {
-  .cantidad {
-    @apply hidden;
+  @apply bg-[#eee]/40 py-[2rem];
+  &-content{
+    @apply font-roboto text-[1.5rem] not-italic leading-[2.4rem] font-normal mb-[2.4rem];
   }
-  .cantidad:hover {
-    @apply flex bg-[blue];
-  }
+
+  
 }

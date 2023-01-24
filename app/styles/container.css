@@ -1,5 +1,5 @@
 .Container {
-   @apply px-[2.2rem];
+   @apply px-[2.5rem];
    
    @media screen(laptop) {
       @apply p-0 w-[78.2%] mx-auto;

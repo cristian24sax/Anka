@@ -1,0 +1,16 @@
+.HomeCardProduct{
+  @apply bg-[red];
+  &-cant{
+    @apply hidden;
+  }
+
+
+  @screen laptop{
+    &-cant{
+      @apply block opacity-0;
+    }
+    &:hover &-cant{
+      @apply opacity-80;
+    }
+  }
+}
