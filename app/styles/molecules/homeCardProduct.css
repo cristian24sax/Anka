@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   min-height: 12.7rem;
   &-title {
-    @apply text-[2.4rem] text-secondary font-medium absolute top-[9rem] px-[1rem] bg-black/70 ;
+    @apply text-[2.4rem] text-secondary font-medium absolute bottom-0 px-[1rem] bg-black/70 ;
   }
   &-cant {
     @apply hidden;
@@ -19,12 +19,16 @@
   }
 
   @screen laptop {
+    &-title{
+      border-radius:10px;
+    }
     &-cant {
       @apply block opacity-0;
-      transition: all 200ms;
+      transition: all 350ms;
     }
     &:hover &-cant {
-      @apply opacity-80;
+      @apply opacity-80 bg-[#fff] text-center py-[1rem] font-medium italic;
     }
   }
+
 }

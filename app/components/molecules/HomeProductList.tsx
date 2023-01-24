@@ -23,7 +23,7 @@ export const HomeProductList = ({ list }: HomeProductListProps) => {
           <HomeCardProducts key={index} card={card} />
         ))}
       </div>
-      <div className="HomeBanner-btn">
+      <div className="HomeProductList-btn">
         <Button type="primary" onClick={handleClick}>{`${
           !isActive ? `${polylang.lbl_see_more}` : 'Ver menos'
         }`}</Button>

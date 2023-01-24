@@ -33,7 +33,7 @@ export const HomeCardProducts = ({ card }: HomeCardProductsProps) => {
     >
       <div className='HomeCardProduct-content'>
         <div className="HomeCardProduct-title">{card.title}</div>
-        <div className="HomeCardProduct-cant">{cantProduc}</div>
+        <div className="HomeCardProduct-cant">{cantProduc} Productos</div>
       </div>
       <div className='HomeCardProduct-picture'>
 
