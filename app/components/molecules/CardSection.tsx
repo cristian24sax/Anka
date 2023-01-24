@@ -9,9 +9,10 @@ export interface CardSectionProps {
   content: string;
   img: Img;
   img_mobile: Img;
+  slug:string
 }
 
-export const CardSection = ({ title, content, img ,img_mobile }: CardSectionProps) => {
+export const CardSection = ({ title, content, img ,img_mobile,slug }: CardSectionProps) => {
   const { polylang } = useGenerals();
   // console.log(img.url)
   return (
@@ -30,7 +31,7 @@ export const CardSection = ({ title, content, img ,img_mobile }: CardSectionProp
     <div className="CardSection-title">{title}</div>
       <div className="CardSection-content">{content}</div>
       <div className="CardSection-btn">
-        <Button type="primary">{polylang.lbl_see_more}</Button>
+        <Button url={`${slug}`} type="primary">{polylang.lbl_see_more}</Button>
       </div>
     </div>
     </div>

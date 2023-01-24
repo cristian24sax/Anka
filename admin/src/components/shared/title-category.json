@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_title_categories",
+  "info": {
+    "displayName": "TitleCategory",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "Faros Led",
+        "Faros Mina",
+        "Faros Oscuros"
+      ]
+    }
+  }
+}

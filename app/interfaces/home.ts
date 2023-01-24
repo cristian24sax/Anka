@@ -49,6 +49,7 @@ export interface Card {
   content: string
   img: Img
   img_mobile: Img
+  slug: string
 }
 export interface HomeProducts {
   title: string

@@ -16,6 +16,11 @@
     },
     "content": {
       "type": "text"
+    },
+    "name": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.title-category"
     }
   }
 }
