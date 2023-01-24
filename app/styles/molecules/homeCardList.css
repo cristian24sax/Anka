@@ -1,5 +1,5 @@
 .HomeCardList {
-  @apply flex flex-col mt-[-.5rem] gap-[4rem];
+  @apply flex flex-col mt-[-.5rem] gap-[4rem] ;
 
   @screen laptop {
     @apply flex-row mt-[2.5rem] w-[70%] mx-auto;

@@ -1,8 +1,10 @@
 .HomeProductList{
-  @apply  flex flex-col gap-[2rem];
+  @apply  flex flex-col gap-[2rem]  h-[44.1rem] overflow-hidden;
  
-
+  &.isActive{
+    @apply h-full;
+  }
  @screen laptop{
-  @apply flex flex-row;
+  @apply flex flex-row h-full;
  }
 }

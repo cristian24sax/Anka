@@ -1,4 +1,6 @@
+import { useGenerals } from '../../context/generals.context'
 import { Card } from '../../interfaces/home'
+import { Button } from '../atoms/Button'
 import { CardSection } from './CardSection'
 
 export interface HomeCardListProps {
@@ -6,6 +8,7 @@ export interface HomeCardListProps {
 }
 
 export const HomeCardList = ({ cards }: HomeCardListProps) => {
+  const {polylang} = useGenerals()
   return (
     <div className="HomeCardList">
       {cards.map(({ title, content, img, img_mobile }, index) => (
@@ -17,6 +20,8 @@ export const HomeCardList = ({ cards }: HomeCardListProps) => {
           img_mobile={img_mobile}
         />
       ))}
+
     </div>
+    
   )
 }

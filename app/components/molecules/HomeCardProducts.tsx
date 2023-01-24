@@ -1,6 +1,7 @@
 import axios from 'axios'
-import { useState } from 'react'
+import { CSSProperties, useState } from 'react'
 import { ListProducts } from '../../interfaces/home'
+import { ImageStrapi } from '../../lib/utils'
 
 export interface HomeCardProductsProps {
   card: ListProducts
@@ -23,9 +24,20 @@ export const HomeCardProducts = ({ card }: HomeCardProductsProps) => {
     <div
       className="HomeCardProduct"
       onMouseEnter={() => handleHover(card.title)}
+      style={
+        {
+          '--bg-desktop': `url(${ImageStrapi(card.img?.url)})`,
+          '--bg-mobile': `url(${ImageStrapi(card.img_mobile?.url)})`,
+        } as CSSProperties
+      }
     >
-      <div className="HomeCardProduct-title">{card.title}</div>
-      <div className="HomeCardProduct-cant">{cantProduc}</div>
+      <div className='HomeCardProduct-content'>
+        <div className="HomeCardProduct-title">{card.title}</div>
+        <div className="HomeCardProduct-cant">{cantProduc}</div>
+      </div>
+      <div className='HomeCardProduct-picture'>
+
+      </div>
     </div>
   )
 }
