@@ -1,0 +1,45 @@
+.AboutPage {
+  @apply py-[3rem] bg-[#eee] flex flex-col;
+  &-picture {
+    @apply mb-[2rem];
+    border-radius: 10px;
+  }
+  &-subtitle {
+    @apply font-roboto text-secondary font-medium text-[1.7rem] leading-[3.4rem] not-italic;
+    letter-spacing: 0.05em;
+  }
+  p {
+    @apply font-roboto font-light text-black text-[1.45rem] not-italic leading-[2.1rem] mb-[1rem];
+    letter-spacing: 0.03em;
+  }
+  h3 {
+    @apply font-roboto font-semibold text-[1.55rem] text-secondary not-italic leading-[2.1rem] mt-[2rem];
+    letter-spacing: 0.05em;
+  }
+  h4 {
+    @apply font-roboto font-semibold text-[1.45rem] text-black not-italic leading-[2.1rem] my-[.5rem];
+    letter-spacing: 0.05em;
+  }
+
+  @screen tablet {
+    @apply py-[4rem];
+    &-picture {
+      @apply mx-auto w-[50%];
+    }
+  }
+
+  @screen laptop {
+    &-content {
+      @apply flex flex-row;
+    }
+    &-picture {
+      @apply w-[48%] flex justify-center items-center m-auto;
+    }
+    &-info {
+      @apply w-[48%];
+    }
+    &-subtitle {
+      @apply text-[2.6rem];
+    }
+  }
+}

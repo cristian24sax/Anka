@@ -5,7 +5,7 @@ import { ImageStrapi } from "../../lib/utils"
 
 export const Logo =({})=>{
     const {options} = useGenerals()
-    const url = `http://localhost:1338${options.logo.url}`
+    const url = `http://localhost:1337${options.logo.url}`
     // console.log(url)
     return(
         <picture className="BannerInternal-background">
