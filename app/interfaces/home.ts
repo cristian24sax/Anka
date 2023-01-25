@@ -34,6 +34,7 @@ export interface HomeProductsList {
 export interface ListProducts {
   title: string
   img: Img
+  slug:string
   img_mobile: Img
 }
 export interface HomeMiddle {

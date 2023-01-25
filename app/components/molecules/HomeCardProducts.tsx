@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Link from 'next/link'
 import { CSSProperties, useState } from 'react'
 import { ListProducts } from '../../interfaces/home'
 import { ImageStrapi } from '../../lib/utils'
@@ -21,7 +22,8 @@ export const HomeCardProducts = ({ card }: HomeCardProductsProps) => {
     fecth()
   }
   return (
-    <div
+    // <Link href={`${card.slug}`}>
+       <div
       className="HomeCardProduct"
       onMouseEnter={() => handleHover(card.title)}
       style={
@@ -39,5 +41,6 @@ export const HomeCardProducts = ({ card }: HomeCardProductsProps) => {
 
       </div>
     </div>
+    // </Link>
   )
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "Service"
+    "displayName": "Service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,18 +15,13 @@
     "title": {
       "type": "string"
     },
-    "img": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
+    "subtitle": {
+      "type": "string"
     },
-    "List_services": {
-      "type": "richtext"
+    "service": {
+      "type": "component",
+      "repeatable": true,
+      "component": "block.services"
     }
   }
 }
