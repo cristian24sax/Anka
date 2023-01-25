@@ -1,0 +1,61 @@
+.ServiceCard {
+  @apply flex flex-col;
+  &-picture {
+    border-radius: 10px;
+  }
+
+  &-info {
+    @apply mt-[2rem] relative flex flex-col justify-center items-center;
+    &__title {
+      @apply text-center font-roboto font-medium text-[1.6rem] mb-[1rem];
+    }
+    p {
+      @apply font-roboto text-center text-[1.5rem];
+    }
+    ul {
+      @apply flex flex-col items-start justify-center mt-[1rem];
+      list-style-type: disc;
+    }
+    &__btn {
+      @apply mx-auto my-[1.5rem];
+    }
+  }
+
+  @screen tablet {
+    &-picture {
+      @apply mx-auto w-[50%];
+    }
+  }
+  @screen laptop {
+    @apply grid grid-cols-2 gap-[2rem];
+  
+
+    &-picture {
+      @apply w-full;
+      img {
+        width: calc(70rem * var(--scale));
+        height: calc(33rem * var(--scale));
+      }
+    }
+
+    &-info {
+      @apply justify-start items-start;
+      &__title {
+        @apply text-left font-roboto font-medium  mb-[1rem];
+        font-size: calc(2.4rem * var(--scale));
+      }
+      p {
+        @apply text-left;
+        font-size: calc(1.9rem * var(--scale));
+      }
+      ul {
+        @apply flex flex-col items-start justify-start mt-[1rem];
+        padding-left: calc(2rem * var(--scale));
+        list-style-type: disc;
+      }
+      &__btn {
+        @apply mx-0  mt-auto;
+      }
+    }
+  }
+}

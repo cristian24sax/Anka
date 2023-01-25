@@ -1,0 +1,16 @@
+.ServicePage{
+  @apply pt-[3rem] pb-[5rem] bg-primary/10;
+  &-subtitle{
+    @apply text-center font-roboto font-medium text-[1.7rem] capitalize mt-[-1.5rem] mb-[1.7rem];
+  }
+
+  @screen laptop{
+    padding-top: calc(8rem*var(--scale));
+    padding-bottom: calc(9rem*var(--scale));
+    &-subtitle{
+    @apply  capitalize mt-[-1.5rem] ;
+    font-size:calc(2.2rem*var(--scale));
+    margin-bottom: calc(4.4rem*var(--scale));
+    }
+  }
+}

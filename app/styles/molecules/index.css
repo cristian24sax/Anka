@@ -1,7 +1,7 @@
 @import 'Navbar.css';
 @import 'InfoHeader.css';
-@import 'ServicesCard.css';
-@import 'ServicesList.css';
+@import 'serviceCard.css';
+@import 'serviceList.css';
 @import 'OurValuesCard.css';
 @import 'BreadCumbs.css';
 @import 'ServicesDetailsAbout.css';
