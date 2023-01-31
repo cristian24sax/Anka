@@ -15,7 +15,7 @@ export interface AboutProps {
 const AboutPage: NextPage<AboutProps> = ({ about }) => {
   //   console.log(about);
   return (
-    <div className="AboutPage">
+    <div className="AboutPage main-page">
       <Information title={about.title} type="center" />
       <Container>
         <div className="AboutPage-content">

@@ -20,7 +20,7 @@ import { HomeAbout } from '../components/molecules'
 import { HomeService } from '../components/organisms/HomeService'
 import { HomeBanner } from '../components/organisms/HomeBanner'
 import { HomeProduct } from '../components/organisms/HomeProduct'
-import { HomeCard } from '../components/organisms'
+import { HomeCard, HomeMarcas } from '../components/organisms'
 import { HomeBannerMiddle } from '../components/organisms/HomeBannerMiddle'
 import { CategoriesData } from '../interfaces/categories'
 import { useEffect, useState } from 'react'
@@ -94,55 +94,8 @@ const HomePage: NextPage<HomeProps> = ({ home, products }) => {
         list={home.HomeProductsList.List_cardProducts}
         section="/products"
       />
-      {/* <HomeService
-        title={home.service.title}
-        content={home.service.content}
-        img={home.service.img}
-        section="/service"
-      />
- */}
-      {/* <HomeAbout title={home.service.title} content={home.service.content} /> */}
-      {/* <MainBanner
-            title={home.main_banner.titles.title}
-            subtitle={home.main_banner.titles.subtitle}
-            content={home.main_banner.content}
-            background={home.main_banner.bg.url}
-            backgroundMobile={home.main_banner.bg_mobile.url}
-         />
-         <BannerCharacteristics characteristicsList={home.home_characteristics.characteristics_list} />
-         <HomeService title={home.home_services.titles.title} subtitle={home.home_services.titles.subtitle} content={home.home_services.content} services={services}
-         />
-         <BannerInternal />
-         <HomeHowWork
-            title={home.home_work.title.title}
-            subtitle={home.home_work.title.subtitle}
-            content= {home.home_work.content}
-            card_work={home.home_work.card_work}
-            img={home.home_work.img}
-            img_mobile={home.home_work.img_mobile}
-         />
-         <HomeRewiew
-            title={home.home_review.title.title}
-            subtitle={home.home_review.title.subtitle}
-            content={home.home_review.content}
-            list_review={home.home_review.card_review}
-         
-         />
-         <HomeAbout
-            title={home.home_about.titles.title}
-            subtitle={home.home_about.titles.subtitle}
-            content={home.home_about.content}
-            images={home.home_about.images}
-         />
-         
-         <HomeLocation
-            title={home.home_location.titles.title}
-            subtitle={home.home_location.titles.subtitle}
-            content={home.home_location.content}
-            map={home.home_location.map}
-            bg={home.home_location.bg_desktop.url}
-         />
-         <SeoEngine seo={home.seo} /> */}
+      <HomeMarcas title={home.HomeMarca.title} marcas={home.HomeMarca.marcas}/>
+         {/* <SeoEngine seo={home.seo} /> */}
     </main>
   )
 }

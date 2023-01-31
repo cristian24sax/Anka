@@ -1,5 +1,5 @@
 .Footer {
-   @apply text-white bg-night py-[4rem];
+   @apply text-white bg-night py-[4rem] ;
    @screen laptop {
       @apply flex items-center;
       padding: calc(4rem * var(--scale)) 0;

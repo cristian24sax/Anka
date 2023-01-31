@@ -1,0 +1,7 @@
+.HomeMarcas {
+  @apply py-[5rem];
+  h2{
+    @apply text-[#000] text-[2rem] font-serif leading-[2.3rem];
+  }
+
+}

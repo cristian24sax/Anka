@@ -4,5 +4,7 @@
     @apply font-roboto text-[1.5rem] not-italic leading-[2.4rem] font-normal mb-[2.4rem];
   }
 
-  
+  @screen laptop{
+    @apply pt-[4rem] pb-[8rem];
+  }
 }

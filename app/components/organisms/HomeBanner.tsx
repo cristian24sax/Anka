@@ -41,7 +41,7 @@ export const HomeBanner = ({
         <h1 className='HomeBanner-h1'>{title}</h1>
         <p className='HomeBanner-p'>{content}</p>
         <div className='HomeBanner-btn' >
-          <Button type="primary" onClick={()=>goToSection('/service')}>{polylang.lbl_see_service}</Button>
+          <Button type="primary" url="/service">{polylang.lbl_see_service}</Button>
         </div>
       </div>
       </div>

@@ -15,7 +15,7 @@ export interface ServiceProps {
 const ServicePage: NextPage<ServiceProps> = ({ service }) => {
     // console.log(service);
   return (
-    <div className="ServicePage">
+    <div className="ServicePage main-page">
       <Information title={service.title} type="center" />
       <h3 className="ServicePage-subtitle">{service.subtitle}</h3>
       <Container>

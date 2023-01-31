@@ -23,11 +23,11 @@
       border-radius:10px;
     }
     &-cant {
-      @apply block opacity-0;
+      @apply block opacity-0 text-center;
       transition: all 350ms;
     }
     &:hover &-cant {
-      @apply opacity-80 bg-[#fff] text-center py-[1rem] font-medium italic;
+      @apply opacity-80 bg-[#fff]  py-[1rem] font-medium italic;
     }
   }
 

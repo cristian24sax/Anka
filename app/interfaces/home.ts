@@ -1,3 +1,4 @@
+import { HomeMarcas } from '../components/organisms'
 import { Img, Meta, Titles } from './globals'
 
 export interface Home {
@@ -15,16 +16,17 @@ export interface HomeData {
   homeBanner: MainBanner
   HomeProducts: HomeProducts
   HomeProductsList: HomeProductsList
-  // service: HomeService
-  // about :HomeAbout
-  //    main_banner: MainBanner
-  //    home_characteristics: HomeCharacteristics
-  //    home_services: HomeAboutClass
-  //    home_work: HomeHowWork
-  //    home_review: HomeReview
-
-  //    home_location: HomeLocation
+  HomeMarca:HomeMarcas
   //    seo: SEO
+}
+export interface HomeMarcas{
+  title:string
+  marcas: Marcas[]
+}
+export interface Marcas{
+  img:Img
+  url:string
+
 }
 export interface HomeProductsList {
   title: string
