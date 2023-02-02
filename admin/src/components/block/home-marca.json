@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_block_home_marcas",
+  "info": {
+    "displayName": "HomeMarca",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "marcas": {
+      "displayName": "marcas",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.marcas"
+    }
+  }
+}

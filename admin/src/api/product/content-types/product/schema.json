@@ -29,9 +29,6 @@
         "audios"
       ]
     },
-    "price": {
-      "type": "decimal"
-    },
     "isNew": {
       "type": "boolean",
       "default": false
