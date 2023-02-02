@@ -1,10 +1,16 @@
 .HomeProduct {
   @apply bg-[#eee]/40 py-[2rem];
-  &-content{
+  &-content {
     @apply font-roboto text-[1.5rem] not-italic leading-[2.4rem] font-normal mb-[2.4rem];
   }
 
-  @screen laptop{
-    @apply pt-[4rem] pb-[8rem];
+  @screen laptop {
+    padding-top: calc(8rem * var(--scale));
+    padding-bottom: calc(10rem * var(--scale));
+    &-content {
+      font-size: calc(1.9rem * var(--scale));
+      line-height: calc(2.9rem * var(--scale));
+      margin-bottom: calc(3rem * var(--scale));
+    }
   }
 }

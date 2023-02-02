@@ -41,5 +41,15 @@
     &-subtitle {
       @apply text-[2.6rem];
     }
+    p {
+      font-size: calc(1.8rem * var(--scale));
+    }
+    h3 {
+      font-size: calc(1.8rem * var(--scale));
+    }
+    h4 {
+      @apply font-roboto font-semibold text-[1.45rem] text-black not-italic leading-[2.1rem] my-[.5rem];
+      letter-spacing: 0.05em;
+    }
   }
 }

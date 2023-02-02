@@ -84,17 +84,17 @@ const HomePage: NextPage<HomeProps> = ({ home, products }) => {
         section="/"
       />
       <HomeCard title={home.homeCard.title} cards={home.homeCard.cards} />
-      {/* <HomeBannerMiddle
+      <HomeBannerMiddle
         text={home.banner_middle.description}
         img={home.banner_middle.img.url}
-      /> */}
+      />
       <HomeProduct
         title={home.HomeProductsList.title}
         content={home.HomeProductsList.content}
         list={home.HomeProductsList.List_cardProducts}
         section="/products"
       />
-      <HomeMarcas title={home.HomeMarca.title} marcas={home.HomeMarca.marcas}/>
+      {/* <HomeMarcas title={home.HomeMarca.title} marcas={home.HomeMarca.marcas}/> */}
          {/* <SeoEngine seo={home.seo} /> */}
     </main>
   )

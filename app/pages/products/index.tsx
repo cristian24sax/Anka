@@ -10,13 +10,14 @@ export interface ProductsPageProps {
   products: HomeProductsList
 }
 const ProductsPage: NextPage<ProductsPageProps> = ({ products }) => {
-  console.log(products.List_cardProducts.map((product)=>(
-    product.slug
-  )))
+  // console.log(products.List_cardProducts.map((product)=>(
+  //   product.slug
+  // )))
   return (
     <div className="ProductsPage main-page h-full">
-      <Information title={products.title} type="center" />
       <Container>
+        <Information title={products.title} type="center" />
+        <p className='ProductsPage-content'>{products.content}</p>
         <HomeProductList list={products.List_cardProducts} />
       </Container>
     </div>
