@@ -1,0 +1,30 @@
+.ProductsPageList {
+  @apply py-[4rem];
+  &-card {
+    @apply grid grid-cols-2 gap-[3rem];
+    .CardSection-info {
+      @apply p-[0rem] pt-[1rem] px-[0.5rem];
+    }
+    .CardSection-title {
+      @apply text-[1.5rem] font-medium;
+    }
+  }
+  @screen tabletxl {
+    &-card {
+      @apply grid-cols-3;
+    }
+    .CardSection-info {
+      @apply p-[0rem] pt-[1rem] px-[1.2rem];
+    }
+  }
+  @screen laptop {
+    &-card {
+      @apply grid grid-cols-[30%_30%_30%];
+      gap: calc(5rem * var(--scale));
+    }
+    .CardSection-info {
+      padding-left: calc(3rem * var(--scale));
+      padding-right: calc(3rem * var(--scale));
+    }
+  }
+}

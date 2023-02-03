@@ -19,6 +19,7 @@ export const HomeCardList = ({ cards }: HomeCardListProps) => {
           img={img}
           img_mobile={img_mobile}
           slug={slug}
+          show={true}
         />
       ))}
 
