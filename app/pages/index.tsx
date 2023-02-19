@@ -85,12 +85,16 @@ const HomePage: NextPage<HomeProps> = ({ home, products }) => {
         section="/"
       />
       <HomeCard title={home.homeCard.title} cards={home.homeCard.cards} />
-      <HomeBannerMiddle
+      {/* <HomeBannerMiddle
         text={home.banner_middle.description}
         img={home.banner_middle.img.url}
+<<<<<<< HEAD
       />
       {/* <OurAccordion/> */}
       
+=======
+      /> */}
+>>>>>>> c2e08a3f0f5e662e9629ef87a4c633a596286333
       <HomeProduct
         title={home.HomeProductsList.title}
         content={home.HomeProductsList.content}

@@ -1,3 +1,5 @@
+import { Img } from "./globals";
+
 export interface Products {
   data: ProductsData[];
   meta: Meta;
@@ -12,7 +14,7 @@ export interface ProductsData {
   createdAt:   Date;
   updatedAt:   Date;
   publishedAt: Date;
-  img:         null;
+  img:         Img;
   subcategory: Category;
   category:    Category;
 }
