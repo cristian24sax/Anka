@@ -26,6 +26,7 @@ import { CategoriesData } from '../interfaces/categories'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Products, ProductsData } from '../interfaces/products'
+import { OurAccordion } from '../components/molecules/OurAccordion'
 // import { HomeHowWork } from '../components/organisms/HomeHowWork'
 
 interface HomeProps {
@@ -88,6 +89,8 @@ const HomePage: NextPage<HomeProps> = ({ home, products }) => {
         text={home.banner_middle.description}
         img={home.banner_middle.img.url}
       />
+      {/* <OurAccordion/> */}
+      
       <HomeProduct
         title={home.HomeProductsList.title}
         content={home.HomeProductsList.content}

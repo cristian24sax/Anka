@@ -1,11 +1,27 @@
 import { useState } from "react";
 import { CardsAbout } from "../../interfaces/home";
 
-export interface OurAccordionProps {
-  cards: CardsAbout[];
-}
+// export interface OurAccordionProps {
+//   cards: CardsAbout[];
+// }
 
-export const OurAccordion = ({ cards }: OurAccordionProps) => {
+// export const OurAccordion = ({ cards }: OurAccordionProps) => {
+export const OurAccordion = (  ) => {
+  const cards =[{
+    "section":"asd",
+    "title":"aa",
+    "content":"ad"
+  },
+  {
+    "section":"asd",
+    "title":"aa",
+    "content":"ad"
+  },
+  {
+    "section":"asd",
+    "title":"aa",
+    "content":"ad"
+  }]
   const [active, setActive] = useState<number | null>(null);
   const handleCLick = (i: number) => {
     if (i === active) setActive(null);

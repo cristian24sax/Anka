@@ -5,30 +5,36 @@
   background-position: center;
   background-repeat: no-repeat;
   min-height: 12.7rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+
   &-title {
-    @apply text-[2.4rem] text-secondary font-medium absolute bottom-0 px-[1rem] bg-black/70 ;
+    @apply text-[2.4rem] text-secondary font-medium absolute bottom-0 px-[1rem] bg-black/70;
   }
   &-cant {
     @apply hidden;
   }
 
   &-content {
-    @apply absolute  inset-0 ;
-    border-radius:10px;
-    background: rgba(2, 1, 1, 0.3) ;
+    @apply absolute  inset-0;
+    border-radius: 10px;
+    background: rgba(2, 1, 1, 0.3);
   }
 
   @screen laptop {
-    &-title{
-      border-radius:10px;
+    &-title {
+      border-radius: 10px;
     }
     &-cant {
       @apply block opacity-0 text-center;
       transition: all 350ms;
     }
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
     &:hover &-cant {
       @apply opacity-80 bg-[#fff]  py-[1rem] font-medium italic;
     }
   }
-
 }

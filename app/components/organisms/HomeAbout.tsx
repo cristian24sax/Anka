@@ -29,7 +29,7 @@ export const HomeAbout = ({ title, img, cards,section}: HomeAboutProps) => {
             <OurTabs cards={cards} />
           </div>
           <div className="HomeAbout-Accordion">
-            <OurAccordion cards={cards} />
+            {/* <OurAccordion cards={cards} /> */}
           </div>
           <picture className="HomeAbout-picture">
             <Image

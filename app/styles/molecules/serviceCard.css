@@ -27,13 +27,14 @@
     }
   }
   @screen laptop {
-    @apply grid grid-cols-2 gap-[2rem];
-  
-
+    @apply grid grid-cols-2;
+    gap: calc(4rem * var(--scale));
     &-picture {
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
       @apply w-full;
       img {
-        width: calc(70rem * var(--scale));
+        /* width: calc(70rem * var(--scale)); */
+        @apply w-full;
         height: calc(33rem * var(--scale));
       }
     }

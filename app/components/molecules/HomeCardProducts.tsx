@@ -23,7 +23,8 @@ export const HomeCardProducts = ({ card }: HomeCardProductsProps) => {
   }
   return (
     // <Link href={`${card.slug}`}>
-       <Link href={`/products/${card.slug}`}
+    <Link
+      href={`/products/${card.slug}`}
       className="HomeCardProduct"
       onMouseEnter={() => handleHover(card.title)}
       style={
@@ -33,13 +34,11 @@ export const HomeCardProducts = ({ card }: HomeCardProductsProps) => {
         } as CSSProperties
       }
     >
-      <div className='HomeCardProduct-content'>
+      <div className="HomeCardProduct-content">
         <div className="HomeCardProduct-title">{card.title}</div>
         <div className="HomeCardProduct-cant">{cantProduc} Productos</div>
       </div>
-      <div className='HomeCardProduct-picture'>
-
-      </div>
+      <div className="HomeCardProduct-picture"></div>
     </Link>
     // </Link>
   )

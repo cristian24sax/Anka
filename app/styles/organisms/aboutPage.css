@@ -29,8 +29,10 @@
   }
 
   @screen laptop {
+    padding: calc(8rem*var(--scale)) 0;
     &-content {
       @apply flex flex-row;
+      margin-top: calc(2rem*var(--scale));
     }
     &-picture {
       @apply w-[48%] flex justify-center items-center m-auto;
@@ -42,10 +44,12 @@
       @apply text-[2.6rem];
     }
     p {
-      font-size: calc(1.8rem * var(--scale));
+      font-size: calc(2rem * var(--scale));
+      margin-top: calc(.5rem*var(--scale));
     }
     h3 {
-      font-size: calc(1.8rem * var(--scale));
+      font-size: calc(2.2rem * var(--scale));
+      margin-bottom: calc(1rem*var(--scale));
     }
     h4 {
       @apply font-roboto font-semibold text-[1.45rem] text-black not-italic leading-[2.1rem] my-[.5rem];

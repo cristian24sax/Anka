@@ -11,7 +11,7 @@ export interface CategoriesData {
    updatedAt:     Date;
    publishedAt:   Date;
    products:      Product[];
-   subcategories: Subcategory[];
+   subcategory: Subcategory;
 }
 
 export interface Product {
