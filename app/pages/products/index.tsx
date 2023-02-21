@@ -6,6 +6,7 @@ import { ParsedUrlQuery } from 'querystring'
 import { useEffect, useRef, useState } from 'react'
 import { Information } from '../../components/atoms/Information'
 import { Container } from '../../components/globals'
+import { useSearchParams } from 'next/navigation';
 import { HomeProductList } from '../../components/molecules'
 import { Categories, CategoriesData } from '../../interfaces/categories'
 import { Home, HomeProductsList } from '../../interfaces/home'
@@ -24,6 +25,7 @@ const ProductsPage: NextPage<ProductsPageProps> = ({
   categories,
 }) => {
   const [cate, setCate] = useState()
+  const [isActive, setIsActive] = useState(null)
   const router = useRouter()
   const { category } = router.query
   const fetchApi = async () => {
@@ -34,15 +36,20 @@ const ProductsPage: NextPage<ProductsPageProps> = ({
 
     setCate(data.data)
   }
-
+  const searchParams = useSearchParams();
+  const search = searchParams.get('category');
+  console.log(search)
   useEffect(() => {
     fetchApi()
-    console.log('aqui')
   }, [category])
 
   let list: boolean | any = category ? cate : products
-  const handleClick = () => {
-    // list=!category
+  const [active, setActive] = useState<number | null>(null)
+  const handleCLick = (i: number) => {
+    if (i === active) setActive(null)
+    else {
+      setActive(i)
+    }
   }
   return (
     <div className="ProductsPage main-page h-full">
@@ -54,11 +61,14 @@ const ProductsPage: NextPage<ProductsPageProps> = ({
             <ul>
               {categories.map((cate, index) => (
                 <>
-                  <li key={index}>
-                    <Link href={`/products?category=${cate.slug}`}>
-                      {' '}
-                      {cate.name}{' '}
-                    </Link>
+                  <li key={index}
+                      
+                    
+                      className={`${index === active ? 'isActive' : 'asd'}`}
+                      onClick={()=>router.push(`/products?category=${cate.slug}`)}
+                    >
+                      {cate.name}
+                   
                     {cate.products.length}
                   </li>
                   {/* {cate.subcategory?.name && cate.subcategory?.name} */}

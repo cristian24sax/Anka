@@ -38,7 +38,7 @@ export const OurAccordion = (  ) => {
               className={`Accordion-title cursor-pointer ${
                 active==index ? "isActive" : ""
               }`}
-              onClick={() => handleCLick(index)}
+              // onClick={() => handleCLick(index)}
             >
               {section}
             </div>

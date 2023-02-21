@@ -76,6 +76,7 @@ const HomePage: NextPage<HomeProps> = ({ home, products }) => {
 
   return (
     <main className={`min-h-screen main-page`}>
+      {/* <button onClick={}></button> */}
       <HomeBanner
         title={home.homeBanner.title}
         subtitle={home.homeBanner.subtitle}

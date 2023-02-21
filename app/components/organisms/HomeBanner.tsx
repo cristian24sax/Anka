@@ -43,6 +43,7 @@ export const HomeBanner = ({
         <div className='HomeBanner-btn' >
           <Button type="primary" url="/service">{polylang.lbl_see_service}</Button>
         </div>
+        {/* <div onClick={()=>{console.log('ads')}}></div> */}
       </div>
       </div>
     </div>
