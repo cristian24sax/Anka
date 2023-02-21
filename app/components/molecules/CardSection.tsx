@@ -26,12 +26,13 @@ export const CardSection = ({
   return (
     <div className="CardSection">
       <picture className="CardSection-picture">
-        <source media="(min-width: 1200px)" srcSet={ImageStrapi(img.url)} />
+        <source media="(min-width: 1200px)" srcSet={ImageStrapi(img?.url)} />
         <Image
-          loader={() => ImageStrapi(img_mobile.url)}
-          src={ImageStrapi(img_mobile.url)}
+          loader={() => ImageStrapi(img_mobile?.url)}
+          src={ImageStrapi(img_mobile?.url)}
           width={500}
-          height={img_mobile.height}
+          // height={img_mobile?.height}
+          height={500}
           alt="homebanner-bg"
         />
       </picture>

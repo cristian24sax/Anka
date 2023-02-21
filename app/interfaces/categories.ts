@@ -6,6 +6,7 @@ export interface Categories {
 export interface CategoriesData {
    id:            number;
    name:          string;
+   slug:           string;
    description:   string;
    createdAt:     Date;
    updatedAt:     Date;

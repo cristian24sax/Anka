@@ -32,6 +32,10 @@
     },
     "isActive": {
       "type": "boolean"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }
