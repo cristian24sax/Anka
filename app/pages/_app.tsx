@@ -9,29 +9,32 @@ import '../styles/container.css'
 // import 'swiper/css'
 import 'swiper/css'
 import { Layout } from '../components/layouts/Layout'
+import { ActiveCategoryProvider } from '../context/product.context'
 // import { ServiceData } from '../interfaces'
 // import { ServicesControllerState, ServicesProvider } from '../context/services.context'
 interface CustomPageProps {
-   generals: ControllerState
+  generals: ControllerState
   //  services: ServiceData[]
 }
 
 function MyApp({ Component, pageProps }: AppProps<CustomPageProps>) {
-   return (
-      <>
-         <Head>
-            <title>NAN Cosntruction</title>
-            {/* <Favicon /> */}
-         </Head>
-         <GeneralsProvider generals={pageProps.generals}>
-            <NavbarProvider>
-               <Layout >
-                  <Component {...pageProps} />
-               </Layout>
-            </NavbarProvider>
-         </GeneralsProvider>
-      </>
-   )
+  return (
+    <>
+      <Head>
+        <title>NAN Cosntruction</title>
+        {/* <Favicon /> */}
+      </Head>
+      <GeneralsProvider generals={pageProps.generals}>
+        <NavbarProvider>
+          <ActiveCategoryProvider>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ActiveCategoryProvider>
+        </NavbarProvider>
+      </GeneralsProvider>
+    </>
+  )
 }
 
 export default MyApp

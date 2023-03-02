@@ -16,7 +16,7 @@ const ProductList = ({ products }: ProductListProps) => {
     <div className="ProductsPageList ">
       <Container>
         <div className="ProductsPageList-card">
-          {products.map((product) => (
+          {/* {products.map((product) => (
             <CardSection
               key={product.id}
               title={product.title}
@@ -25,7 +25,8 @@ const ProductList = ({ products }: ProductListProps) => {
               img_mobile={product?.img}
               show={false}
             />
-          ))}
+          ))} */}
+          slug
         </div>
       </Container>
     </div>

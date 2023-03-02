@@ -5,7 +5,7 @@
    height: 1em;
    transform: translateZ(0);
    animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
-   @apply text-primary relative overflow-hidden rounded-full;
+   @apply text-black relative overflow-hidden rounded-full;
 }
 
 @keyframes mltShdSpin {

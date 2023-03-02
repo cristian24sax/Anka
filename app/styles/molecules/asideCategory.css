@@ -1,0 +1,22 @@
+.AsideCategory{
+  @apply flex flex-col gap-[2rem];
+  &-head{
+    @apply flex gap-[4rem] w-[70%] justify-between cursor-pointer;
+    border-bottom:1px solid #eee;
+    pre{
+      @apply h-[2.5rem] w-[2.5rem] flex justify-center items-center bg-primary;
+      transition: ease-in .4s;
+    }
+    /* &::before{
+      content:'+';
+      @apply absolute;
+    } */
+
+    &.isActive,&:hover{
+      pre{
+        @apply bg-secondary;
+      }
+    }
+   
+  }
+}

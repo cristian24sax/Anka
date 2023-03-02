@@ -1,9 +1,9 @@
+import { getGenerals } from 'lib/getGenerals'
 import type { NextPage } from 'next'
 import { GetStaticProps } from 'next'
-import { getGenerals } from '../lib/getGenerals'
-// import { Home, HomeData } from '../interfaces'
-// import { SeoEngine } from '../components/globals'
-import { baseApi } from '../lib/baseApi'
+// import { Home, HomeData } from 'interfaces'
+// import { SeoEngine } from 'components/globals'
+import { baseApi } from 'lib/baseApi'
 // import {
 //    BannerCharacteristics,
 //    BannerInternal,
@@ -13,21 +13,14 @@ import { baseApi } from '../lib/baseApi'
 //    HomeRewiew,
 //    HomeServices,
 //    MainBanner,
-// } from '../components/organisms'
-import { Home, HomeData } from '../interfaces/home'
-// import { HomeAbout } from "../components/molecules";
-import { HomeAbout } from '../components/molecules'
-import { HomeService } from '../components/organisms/HomeService'
-import { HomeBanner } from '../components/organisms/HomeBanner'
-import { HomeProduct } from '../components/organisms/HomeProduct'
-import { HomeCard, HomeMarcas } from '../components/organisms'
-import { HomeBannerMiddle } from '../components/organisms/HomeBannerMiddle'
-import { CategoriesData } from '../interfaces/categories'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import { Products, ProductsData } from '../interfaces/products'
-import { OurAccordion } from '../components/molecules/OurAccordion'
-// import { HomeHowWork } from '../components/organisms/HomeHowWork'
+// } from 'components/organisms'
+import { Home, HomeData } from 'interfaces/home'
+// import { HomeAbout } from "components/molecules";
+import { HomeCard } from 'components/organisms'
+import { HomeBanner } from 'components/organisms/HomeBanner'
+import { HomeProduct } from 'components/organisms/HomeProduct'
+import { Products } from 'interfaces/products'
+// import { HomeHowWork } from 'components/organisms/HomeHowWork'
 
 interface HomeProps {
   home: HomeData

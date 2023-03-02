@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { useGenerals } from "../../context/generals.context";
-import { Img } from "../../interfaces";
-import { ImageStrapi } from "../../lib/utils";
+import { useGenerals } from "context/generals.context";
+import { Img } from "interfaces";
+import { ImageStrapi } from "lib/utils";
 import { Button } from "../atoms/Button";
 
 export interface CardSectionProps {

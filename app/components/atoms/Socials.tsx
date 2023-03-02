@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { useGenerals } from "../../context/generals.context"
+import { useGenerals } from "context/generals.context"
 
 interface SocialsProps{
     className?:string

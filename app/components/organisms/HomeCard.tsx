@@ -1,4 +1,4 @@
-import { Card, HomeAbout, HomeService } from "../../interfaces/home";
+import { Card, HomeAbout, HomeService } from "interfaces/home";
 import { Information } from "../atoms/Information";
 import { Container } from "../globals";
 import { HomeCardList } from "../molecules/HomeCardList";

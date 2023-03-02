@@ -1,6 +1,4 @@
-import { useGenerals } from '../../context/generals.context'
-import { ListService } from '../../interfaces/services'
-import { Button } from '../atoms/Button'
+import { ListService } from 'interfaces/services'
 import { ServiceCard } from './ServiceCard'
 
 export interface ServiceListProps {

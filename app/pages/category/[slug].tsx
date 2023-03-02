@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { Container } from '../../components/globals'
-import { CardSection } from '../../components/molecules/CardSection'
-import { Home } from '../../interfaces/home'
-import { Products, ProductsData } from '../../interfaces/products'
-import { baseApi } from '../../lib/baseApi'
-import { getGenerals } from '../../lib/getGenerals'
+import { Container } from 'components/globals'
+import { CardSection } from 'components/molecules/CardSection'
+import { Home } from 'interfaces/home'
+import { Products, ProductsData } from 'interfaces/products'
+import { baseApi } from 'lib/baseApi'
+import { getGenerals } from 'lib/getGenerals'
 
 export interface ProductListProps {
   products: ProductsData[]

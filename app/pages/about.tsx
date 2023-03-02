@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import { Information } from "../components/atoms/Information";
-import { Container } from "../components/globals";
-import { About, AboutData } from "../interfaces/about";
-// import { Service } from '../interfaces'
-import { baseApi } from "../lib/baseApi";
-import { getGenerals } from "../lib/getGenerals";
-import { ImageStrapi } from "../lib/utils";
+import { Information } from "components/atoms/Information";
+import { Container } from "components/globals";
+import { About, AboutData } from "interfaces/about";
+// import { Service } from 'interfaces'
+import { baseApi } from "lib/baseApi";
+import { getGenerals } from "lib/getGenerals";
+import { ImageStrapi } from "lib/utils";
 
 export interface AboutProps {
   about: AboutData;

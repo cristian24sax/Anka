@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react'
-import { ImageStrapi } from '../../lib/utils'
+import { ImageStrapi } from 'lib/utils'
 
 export interface HomeBannerMiddleProps {
   img: string

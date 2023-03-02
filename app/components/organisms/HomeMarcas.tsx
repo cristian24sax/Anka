@@ -1,18 +1,14 @@
 import Image from "next/image";
-import { Img } from "../../interfaces";
-import { ImageStrapi } from "../../lib/utils";
-import { Information } from "../atoms";
-import { Container } from "../globals";
-import Link from "next/link";
 import {
-  Autoplay,
-  EffectCoverflow,
-  Navigation,
+  Autoplay, Navigation,
   Pagination,
-  SwiperOptions,
+  SwiperOptions
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Marcas } from "../../interfaces/home";
+import { Marcas } from "interfaces/home";
+import { ImageStrapi } from "lib/utils";
+import { Information } from "../atoms";
+import { Container } from "../globals";
 export interface HomeMarcasProps {
   title: string;
   marcas: Marcas[];

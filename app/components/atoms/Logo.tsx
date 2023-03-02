@@ -1,6 +1,6 @@
 import Image from "next/image"
-import { useGenerals } from "../../context/generals.context"
-import { ImageStrapi } from "../../lib/utils"
+import { useGenerals } from "context/generals.context"
+import { ImageStrapi } from "lib/utils"
 
 
 export const Logo =({})=>{

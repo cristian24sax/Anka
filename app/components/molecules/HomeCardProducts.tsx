@@ -1,15 +1,18 @@
 import axios from 'axios'
 import Link from 'next/link'
 import { CSSProperties, useState } from 'react'
-import { ListProducts } from '../../interfaces/home'
-import { ImageStrapi } from '../../lib/utils'
+import { useCategoryContext } from 'context/product.context'
+import { ListProducts } from 'interfaces/home'
+import { ImageStrapi } from 'lib/utils'
 
 export interface HomeCardProductsProps {
   card: ListProducts
+  index: number
 }
 
-export const HomeCardProducts = ({ card }: HomeCardProductsProps) => {
+export const HomeCardProducts = ({ card, index }: HomeCardProductsProps) => {
   const [cantProduc, setCantProduc] = useState<number>()
+  const { setActive } = useCategoryContext()
   let type = ''
   const fecth = async () => {
     const result = await axios.get(
@@ -22,10 +25,10 @@ export const HomeCardProducts = ({ card }: HomeCardProductsProps) => {
     fecth()
   }
   return (
-    // <Link href={`${card.slug}`}>
     <Link
-      href={`/products/${card.slug}`}
+      href={`/products?category=${card.slug}`}
       className="HomeCardProduct"
+      onClick={() => setActive(index + 1)}
       onMouseEnter={() => handleHover(card.title)}
       style={
         {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Socials } from '../atoms'
-import { useGenerals } from '../../context/generals.context'
-import { convertToHtml, goToSection } from '../../lib/utils'
+import { useGenerals } from 'context/generals.context'
+import { convertToHtml, goToSection } from 'lib/utils'
 import { Container } from '../globals'
 
 export const Footer = () => {

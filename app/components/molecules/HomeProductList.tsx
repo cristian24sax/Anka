@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
-import { useGenerals } from '../../context/generals.context'
-import { ListProducts } from '../../interfaces/home'
+import { useGenerals } from 'context/generals.context'
+import { ListProducts } from 'interfaces/home'
 import { Button } from '../atoms/Button'
 import { HomeCardProducts } from './HomeCardProducts'
 
@@ -20,7 +20,7 @@ export const HomeProductList = ({ list }: HomeProductListProps) => {
     <>
       <div className={`HomeProductList ${isActive && 'isActive'}`}>
         {list.map((card, index) => (
-          <HomeCardProducts key={index} card={card} />
+          <HomeCardProducts key={index} card={card} index={index} />
         ))}
       </div>
       <div className="HomeProductList-btn">

@@ -15,7 +15,7 @@ export const OurTabs = ({ cards }: OurTabsProps) => {
           <div
             className={`Tab-header ${activeTab===index&&'active'}`}
             key={index}
-            onClick={() => setActiveTab(index)}
+            // onClick={() => setActiveTab(index)}
           >
             <h3 className="Tab-title ">{section}</h3>
             <span className="Tab-span"> </span>

@@ -8,8 +8,8 @@ export interface Products {
 export interface ProductsData {
   id:          number;
   title:       string;
-  description: null | string;
-  price:       number | null;
+  description: string;
+  price:       number ;
   isNew:       boolean;
   createdAt:   Date;
   updatedAt:   Date;

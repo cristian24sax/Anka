@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
-import { useGenerals } from '../../context/generals.context'
-import { ImageStrapi } from '../../lib/utils'
-import { Button } from '../atoms/Button'
+import { useGenerals } from 'context/generals.context'
+import { ImageStrapi } from 'lib/utils'
+import { Button } from '../../atoms/Button'
 
 export interface ardProps {
   title: string
@@ -14,7 +14,7 @@ export const ServiceCard = ({ title, content, img }: ardProps) => {
   const { polylang } = useGenerals()
 
   return (
-    <div className='ServiceCard'>
+    <div className="ServiceCard">
       <picture className="ServiceCard-picture">
         <Image
           loader={() => ImageStrapi(img)}
@@ -27,8 +27,10 @@ export const ServiceCard = ({ title, content, img }: ardProps) => {
       <div className="ServiceCard-info">
         <h2 className="ServiceCard-info__title">{title}</h2>
         <ReactMarkdown>{content}</ReactMarkdown>
-        <div className='ServiceCard-info__btn'>
-          <Button url="/contact" type="primary">{polylang.lbl_contact_us}</Button>
+        <div className="ServiceCard-info__btn">
+          <Button url="/contact" type="primary">
+            {polylang.lbl_contact_us}
+          </Button>
         </div>
       </div>
     </div>

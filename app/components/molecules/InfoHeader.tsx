@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { FC } from 'react'
-import { useGenerals } from '../../context/generals.context'
+import { useGenerals } from 'context/generals.context'
 import { Socials } from '../atoms'
 
 export const InfoHeader: FC = () => {

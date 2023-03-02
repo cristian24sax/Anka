@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import { useNavbarContext } from '../../context/navbar.context'
-import { useObserver } from '../../hooks'
+import { useNavbarContext } from 'context/navbar.context'
+import { useObserver } from 'hooks'
 
 const ObserverTop = () => {
    const { isHeaderWhite, setIsHeaderWhite } = useNavbarContext()

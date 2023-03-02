@@ -1,10 +1,8 @@
-import Image from 'next/image'
+import { useGenerals } from 'context/generals.context'
+import { Img } from 'interfaces'
+import { ImageStrapi } from 'lib/utils'
 import { CSSProperties } from 'react'
-import { useGenerals } from '../../context/generals.context'
-import { Img } from '../../interfaces'
-import { goToSection, ImageStrapi } from '../../lib/utils'
 import { Button } from '../atoms/Button'
-import { Information } from '../atoms/Information'
 
 export interface HomeBannerProps {
   title: string
@@ -43,7 +41,7 @@ export const HomeBanner = ({
         <div className='HomeBanner-btn' >
           <Button type="primary" url="/service">{polylang.lbl_see_service}</Button>
         </div>
-        {/* <div onClick={()=>{console.log('ads')}}></div> */}
+        {/* <div onClick={()=>{console.log('adsban')}}></div> */}
       </div>
       </div>
     </div>

@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FC, useState } from "react";
-import { useGenerals } from "../../context/generals.context";
-import { useNavbarContext } from "../../context/navbar.context";
-import { goToSection } from "../../lib/utils";
+import { useGenerals } from "context/generals.context";
+import { useNavbarContext } from "context/navbar.context";
 import { Logo } from "../atoms";
 
 interface NavbarProps {

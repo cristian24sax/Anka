@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { useGenerals } from "../../context/generals.context";
-import { Img } from "../../interfaces";
-import { ImageStrapi } from "../../lib/utils";
+import { useGenerals } from "context/generals.context";
+import { Img } from "interfaces";
+import { ImageStrapi } from "lib/utils";
 import { Button } from "../atoms/Button";
 import { Information } from "../atoms/Information";
 import { Container } from "../globals";

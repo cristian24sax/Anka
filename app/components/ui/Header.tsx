@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import { useState } from "react"
-import { useGenerals } from "../../context/generals.context"
-import { useNavbarContext } from "../../context/navbar.context"
+import { useGenerals } from "context/generals.context"
+import { useNavbarContext } from "context/navbar.context"
 import { Socials ,Logo, MenuIcon} from "../atoms"
 import { NavBar } from "../molecules/NavBar"
 

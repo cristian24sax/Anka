@@ -11,7 +11,24 @@
       font-size: calc(1.9rem * var(--scale));
       line-height: calc(2.9rem * var(--scale));
       margin-bottom: calc(3rem * var(--scale));
-      margin-top: calc(1.5rem*var(--scale));
+      margin-top: calc(1.5rem * var(--scale));
     }
   }
+
+  @screen laptop {
+    &-main {
+      @apply flex h-full w-full bg-black;
+    }
+    &-aside {
+      @apply bg-[#fff] w-[25%] h-[80vh];
+    }
+
+    &-listProducts {
+      @apply flex  h-[100vh] bg-blue w-[75%];
+    }
+  }
+}
+
+.Loader {
+  display: inline-block;
 }
