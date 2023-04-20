@@ -16,6 +16,7 @@ export const getStaticProps = async () => {
       props: {
          generals,
         //  services: services.data,
+         //asdasd
       },
    }
 }
